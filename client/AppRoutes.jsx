@@ -2,22 +2,18 @@
 
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Main } from './components'
-import '../public/styles/index.css'
+import { Main, Home, Resume, Contact } from './components'
 
 
-const AppRoutes = () => (
-  <Switch>
-    <Route exact path='/' component={ Main } />
-    {
-      // About
-      // Contact
-      // Resume
-      // ???
-    }
-    <Redirect to='/' />
-  </Switch>
-)
-
-
-export default AppRoutes
+export default function AppRoutes() {
+  return (
+    <Main>
+      <Switch>
+        <Route exact path='/' component={ Home } />
+        <Route exact path='/resume' component={ Resume } />
+        <Route exact path='/contact' component={ Contact } />
+        <Redirect to='/' />
+      </Switch>
+    </Main>
+  )
+}

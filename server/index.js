@@ -45,7 +45,7 @@ const startListening = () => {
 }
 
 // connect to database
-mongoose.connect(`localhost://${PORT}/personal-site`)
+mongoose.connect(`mongodb://localhost://${PORT}/personal-site`, { useMongoClient: true })
 
 createApp()
 startListening()
