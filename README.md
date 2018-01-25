@@ -10,3 +10,12 @@ Personal promotion platform
   ### functionality
     * display resume pdf
       * offer download of pdf
+
+  ### thing to include
+    * welcome! (home)
+    * elevator pitch (home)
+    * examples of best work (my work)
+    * locations on the web (contact)
+      * linkedin, github, etc.
+    * blog ???
+    * testimonials (absent)
