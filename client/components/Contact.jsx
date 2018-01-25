@@ -1,12 +1,9 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { Navbar } from './'
-
-import '../../public/styles/index.scss'
 
 
-export default class Main extends Component {
+export default class Contact extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -19,9 +16,7 @@ export default class Main extends Component {
   render () {
     return (
       <div>
-        <Navbar />
-        MAIN
-        {/* { children } */}
+        email: kyleuehlein@gmail.com
       </div>
     )
   }
