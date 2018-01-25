@@ -3,10 +3,10 @@
 import React from 'react'
 
 
-export default function Contact() {
+export default function Resume() {
   return (
     <div>
-      email: kyleuehlein@gmail.com
+      Resume
     </div>
   )
 }
