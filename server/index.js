@@ -40,7 +40,7 @@ const createApp = () => {
 
 const startListening = () => {
   const server = app.listen(PORT, () =>
-    console.log(`Blazin on port ${PORT}`)
+    console.log(`\nBlazin on port ${PORT}\n`)
   )
 }
 
