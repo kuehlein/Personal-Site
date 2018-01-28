@@ -3,8 +3,6 @@
 import React, { Component } from 'react'
 import { Navbar } from './'
 
-import '../../public/styles/index.scss'
-
 
 export default class Main extends Component {
   constructor (props) {
@@ -21,9 +19,13 @@ export default class Main extends Component {
       <div>
         <Navbar />
         MAIN
-        { this.props.children }
+        <div className='main-child'>
+          { this.props.children }
+        </div>
       </div>
     )
   }
 
 }
+
+// yarn remove style-loader ?

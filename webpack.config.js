@@ -1,5 +1,8 @@
 'use strict'
 
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 
 module.exports = {
   entry: './client/app.jsx',
@@ -21,15 +24,45 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        include: [
+          path.resolve(__dirname, 'client/styles')
+        ],
+        use: ExtractTextPlugin.extract({
+          publicPath: '../../',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            }, {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.png$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'client/assets/[name].[ext]'
+            }
+          }
         ]
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '*']
-  }
+    extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.png', '*']
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'client/styles/app.css'
+    })
+  ]
 }
