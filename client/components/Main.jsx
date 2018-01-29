@@ -27,5 +27,3 @@ export default class Main extends Component {
   }
 
 }
-
-// yarn remove style-loader ?
