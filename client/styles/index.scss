@@ -1,5 +1,4 @@
 body {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +12,7 @@ body {
     background-color: #000;
     top: 0;
     left: 0;
-    width: 50px;
+    width: 3em;
     height: 100%;
   }
 }
@@ -25,7 +24,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 3em;
     background-color: #000;
   }
 }
@@ -36,26 +35,28 @@ body {
 }
 
 .logo-container {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 }
 
-.logo-container:hover .speech-bubble {
-  visibility: visible;
+.logo-container:hover .speech-bubble, .speech-bubble:after {
+  opacity: 1;
+  margin: -1em 0 0 3.5em;
 }
 
 .speech-bubble {
-  visibility: hidden;
-  min-width: 120px;
+  opacity: 0;
+  min-width: 8em;
   background-color: aliceblue;
   color: black;
   text-align: center;
   border-radius: 1em;
-  padding: 5px 0;
+  padding: 0.5em;
   margin: 2.2em 0 0 0.5em;
-  z-index: 50000;
   position: relative;
-  transition: opacity 10.5s ease-in 0; // broken
+  transition: opacity 0.5s linear 0s;
+  cursor: default;
+  user-select: none;
 }
 
 .speech-bubble:after {
@@ -63,9 +64,10 @@ body {
   display: block; /* reduce the damage in FF3.0 */
   position: absolute;
   top: 0;
-  left: -10px;
+  left: -0.5em;
   width: 0;
-  border-width: 15px 15px 0;
+  margin: 0 0 0 0;
+  border-width: 0.5em 1em 0;
   border-style: solid;
   border-color: aliceblue transparent;
 }
@@ -74,12 +76,10 @@ body {
   background-color: aqua;
   display: flex;
   // align-self: center;
-  border: 0 0 0 50px;
   opacity: 0.5;
   border-radius: 0.7126em;
   width: 80vw;
   height: 80vh;
-  z-index: 0;
 }
 
 .invisible-container {
