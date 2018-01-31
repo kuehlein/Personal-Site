@@ -2,15 +2,19 @@
 
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import NavFace from './NavFace'
 
 
 export default function Navbar() {
   return (
     <header>
-      <Link to='/'><img src='favicon.ico' className='logo' /></Link>
-      <div>K Y L E   U E H L E I N</div>
+      <NavFace
+        text={ 'Click my face to go home 😘' }
+        image={ 'favicon.ico' }
+        route={ '' }
+      />
       <nav>
-        <NavLink to='/contact'>Contact</NavLink>
+        <NavLink to='/contact'>Contact Me</NavLink>
         <NavLink to='/resume'>My Resume</NavLink>
       </nav>
     </header>

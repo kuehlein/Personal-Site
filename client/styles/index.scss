@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-image: url('https://i.imgur.com/rw3LbXr.jpg');
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  header {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background-color: #000;
+  }
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+}
+
+.logo-container {
+  // display: flex;
+  // flex-direction: row;
+}
+
+.logo-container:hover .speech-bubble, .speech-bubble:after {
+  opacity: 1;
+  margin: -1em 0 0 3.5em;
+}
+
+.speech-bubble {
+  opacity: 0;
+  min-width: 8em;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 2.2em 0 0 0.5em;
+  position: relative;
+  transition: opacity 0.5s linear 0s;
+  cursor: default;
+  user-select: none;
+}
+
+.speech-bubble:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  width: 0;
+  margin: 0 0 0 0;
+  border-width: 0.5em 1em 0;
+  border-style: solid;
+  border-color: aliceblue transparent;
+}
+
+.main-child {
+  background-color: aqua;
+  display: flex;
+  // align-self: center;
+  opacity: 0.5;
+  border-radius: 0.7126em;
+  width: 80vw;
+  height: 80vh;
+}
+
+.invisible-container {
+  display: none;
+}
+
+/*
+create menu component
+  menu contains all nav options
+
+on navbar, three line icon to open menu
+  menu slides open when clicked
+
+css
+  menu is positioned off screen
+  slides into/out of view on toggle
+*/
