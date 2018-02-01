@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavFace from './NavFace'
-import Menu from './Menu'
+import Menu, { MenuItem } from './Menu'
 
 
 export default class Navbar extends Component {
@@ -15,8 +15,8 @@ export default class Navbar extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick () {
-    this.setState({ visible: !visible })
+  handleClick (toggle) {
+    this.setState({ visible: !toggle })
   }
 
   render () {
@@ -32,18 +32,25 @@ export default class Navbar extends Component {
         <NavFace
           text={ 'open the menu bby 😘' }
           image={ 'favicon.ico' }
-          onClick={ this.handleClick }
+          handleClick={ this.handleClick }
+          visible={ visible }
         />
 
         {
           visible &&
-          <Menu visible={ visible }/>
+          <Menu visible={ visible }>
+            <NavFace
+              text={ 'check out mah stats bruh 🧠' }
+              image={ 'favicon.ico' }
+              route={ 'resume' }
+            />
+            <NavFace
+              text={ 'stalk me with this info 👀' }
+              image={ 'favicon.ico' }
+              route={ 'contact' }
+            />
+          </Menu>
         }
-
-        <nav>
-          <NavLink to='/contact'>Contact Me</NavLink>
-          <NavLink to='/resume'>My Resume</NavLink>
-        </nav>
       </header>
     )
   }

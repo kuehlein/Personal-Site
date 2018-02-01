@@ -4,7 +4,7 @@ import React from 'react'
 
 
 export default function Menu(props) {
-  const visibilityClass = `${(props.visible ? 'visible ' : '')}${props.alignment}`
+  const visibilityClass = `${props.visible ? 'visible' : ''}`
 
   return (
     <div className='menu'>
