@@ -28,6 +28,4 @@ Personal promotion platform
   ### things to update
     * speech bubble
       * clipping with main (opacity issue)
-      * only visable when hover head !
-      * should not mess with nav
-      * speech bubble should not bounce around
+      * fade in/out (absolute positioning???)
