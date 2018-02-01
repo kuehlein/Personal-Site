@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavFace from './NavFace'
-import Menu, { MenuItem } from './Menu'
+import Menu from './Menu'
 
 
 export default class Navbar extends Component {
@@ -35,7 +35,6 @@ export default class Navbar extends Component {
           handleClick={ this.handleClick }
           visible={ visible }
         />
-
         {
           visible &&
           <Menu visible={ visible }>

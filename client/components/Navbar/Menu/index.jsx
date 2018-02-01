@@ -8,10 +8,13 @@ export default function Menu(props) {
 
   return (
     <div className='menu'>
-      <div className={ visibilityClass }>
+      <div className='visible'>
         { props.children }
       </div>
     </div>
   )
 
 }
+
+
+// because menu is not 'hidden', there is no transition when it becomes visible
