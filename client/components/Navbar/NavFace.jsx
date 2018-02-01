@@ -5,13 +5,21 @@ import { Link } from 'react-router-dom'
 
 
 export default function NavFace(props) {
+  const { route, image,handleClick, visible, text } = props
+
   return (
     <div className='logo-container'>
-      <Link to={ `/${props.route}` }>
-        <img src={`${props.image}`} className='logo' />
-      </Link>
+    {
+      route !== undefined
+        ? <Link to={ `/${route}` }>
+            <img src={ `${image}` } className='logo' />
+          </Link>
+        : <button onClick={ () => handleClick(visible) }>
+            <img src={ `${image}` } className='logo' />
+          </button>
+    }
       <div className='speech-bubble speech-bubble-border'>
-        { props.text }
+        { text }
       </div>
     </div>
   )
