@@ -35,21 +35,7 @@ export default class Navbar extends Component {
           handleClick={ this.handleClick }
           visible={ visible }
         />
-
-        <Menu visible={ visible }>
-            <NavFace
-              text={ 'check out mah stats bruh 🧠' }
-              image={ 'favicon.ico' }
-              route={ 'resume' }
-            />
-            <NavFace
-              text={ 'stalk me with this info 👀' }
-              image={ 'favicon.ico' }
-              route={ 'contact' }
-            />
-          </Menu>
-
-        {/* {
+        {
           visible &&
           <Menu visible={ visible }>
             <NavFace
@@ -63,7 +49,7 @@ export default class Navbar extends Component {
               route={ 'contact' }
             />
           </Menu>
-        } */}
+        }
       </header>
     )
   }
