@@ -18,7 +18,6 @@ export default class Main extends Component {
     return (
       <div className='main-container'>
         <Navbar />
-        {/* MAIN */}
         <div className='main-child'>
           { this.props.children }
         </div>
