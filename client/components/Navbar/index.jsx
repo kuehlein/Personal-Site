@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavFace from './NavFace'
-import Menu, { MenuItem } from './Menu'
+import Menu from './Menu'
 
 
 export default class Navbar extends Component {
@@ -36,7 +36,20 @@ export default class Navbar extends Component {
           visible={ visible }
         />
 
-        {
+        <Menu visible={ visible }>
+            <NavFace
+              text={ 'check out mah stats bruh 🧠' }
+              image={ 'favicon.ico' }
+              route={ 'resume' }
+            />
+            <NavFace
+              text={ 'stalk me with this info 👀' }
+              image={ 'favicon.ico' }
+              route={ 'contact' }
+            />
+          </Menu>
+
+        {/* {
           visible &&
           <Menu visible={ visible }>
             <NavFace
@@ -50,7 +63,7 @@ export default class Navbar extends Component {
               route={ 'contact' }
             />
           </Menu>
-        }
+        } */}
       </header>
     )
   }
