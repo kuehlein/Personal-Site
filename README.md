@@ -19,6 +19,11 @@ Personal promotion platform
       * linkedin, github, etc.
     * blog ???
     * testimonials (absent)
+    * GAME?
+      * packman like heads (mine) chase pointer
+      * you loose if they catch you 
+        * you are redirected to somewhere funny?
+      * collect items from different pages on site?
 
   ### things to update
     * speech bubble
