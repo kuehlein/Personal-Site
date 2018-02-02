@@ -37,7 +37,7 @@ export default class Navbar extends Component {
         />
         {
           visible &&
-          <Menu visible={ visible }>
+          <Menu visible={ visible }> {/* unnecessary? */}
             <NavFace
               text={ 'check out mah stats bruh 🧠' }
               image={ 'favicon.ico' }
