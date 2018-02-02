@@ -14,9 +14,9 @@ export default function NavFace(props) {
         ? <Link to={ `/${route}` }>
             <img src={ `${image}` } className='logo' />
           </Link>
-        : <button onClick={ () => handleClick(visible) }>
+        : <div onClick={ () => handleClick(visible) }>
             <img src={ `${image}` } className='logo' />
-          </button>
+          </div>
     }
       <div className='speech-bubble speech-bubble-border'>
         { text }
