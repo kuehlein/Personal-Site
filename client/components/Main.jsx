@@ -18,6 +18,7 @@ export default class Main extends Component {
     return (
       <div className='main-container'>
         <Navbar />
+        <h1 style={{ position: 'absolute', top: 0, marginLeft: '0.479em' }}>Kyle Uehlein</h1>
         <div className='main-child'>
           { this.props.children }
         </div>

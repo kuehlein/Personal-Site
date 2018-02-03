@@ -19,16 +19,25 @@ module.exports = {
         }
       }, {
         test: /\.scss$/,
-
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
         ]
+      }, {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              mimetype: 'image/png'
+            }
+          }
+        ]
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: ['.js', '.jsx', '.png', '*']
   }
 }
