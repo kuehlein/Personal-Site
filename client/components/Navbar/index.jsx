@@ -39,6 +39,21 @@ export default class Navbar extends Component {
           visible &&
           <Menu visible={ visible }> {/* unnecessary? */}
             <NavFace
+              text={ '$ whoami' }
+              image={ 'favicon.ico' }
+              route={ 'about' }
+            />
+            <NavFace
+              text={ 'i made this stuff 🛠' }
+              image={ 'favicon.ico' }
+              route={ 'projects' }
+            />
+            <NavFace
+              text={ 'musings on software 📝' }
+              image={ 'favicon.ico' }
+              route={ 'blog' }
+            />
+            <NavFace
               text={ 'check out mah stats bruh 🧠' }
               image={ 'favicon.ico' }
               route={ 'resume' }
