@@ -10,7 +10,7 @@
     "start": "node server",
     "start-dev": "yarn run build-client-watch & yarn run start-mongo & yarn run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public",
-    "start-mongo": "mongod --dbpath data",
+    "start-mongo": "mongod --dbpath /data/db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -41,5 +41,5 @@
     "webpack-livereload-plugin": "^1.0.0"
   },
   "author": "Kyle Uehlein",
-  "license": "IIS"
+  "license": "ICU"
 }
