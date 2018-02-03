@@ -8,8 +8,8 @@ html {
 body {
   margin: 0;
   background-image: url('https://i.imgur.com/rw3LbXr.jpg');
+  font-family: 'Julius Sans One', sans-serif;
 }
-
 
 header {
   position: fixed;
@@ -87,11 +87,12 @@ header {
 }
 
 .main-child {
-  background-color: rgba(0, 0, 0, 0.5);
+  //background-color: rgba(0, 0, 0, 0.5); // no?
   margin: 0 0 0 2em;
   border-radius: 0.7126em;
   width: 80vw;
   height: 80vh;
+  text-align: center;
 }
 
 // .menu {
