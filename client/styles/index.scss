@@ -87,19 +87,18 @@ header {
 }
 
 .main-child {
-  background-color: #000;
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 0 0 0 2em;
   border-radius: 0.7126em;
   width: 80vw;
   height: 80vh;
 }
 
-.menu {
-  /* display: block; */
-  display: flex;
-  width: 100vw;
-  background: #442200;
+// .menu {
+//   /* display: block; */
+//   display: flex;
+//   width: 100vw;
+//   background: #442200;
 
   /* width: 100px;
     height: 100px;
@@ -107,7 +106,7 @@ header {
     position :relative;
     -webkit-animation: mymove 5s infinite; */
     // animation: mymove 5s infinite;
-}
+// }
 
 // @keyframes mymove {
 //   from {left: 0vw;}
@@ -121,28 +120,28 @@ header {
 
 
 
-.post-div {
- animation: green-fade 5s ease-in 1;
-}
+// .post-div {
+//  animation: green-fade 5s ease-in 1;
+// }
 
-.menu div {
-  /* position: absolute; */
-    z-index: 2;
-    top:0;
-    width: 250px;
-    height: 30vh;
-    // transition: width ease(250ms);
-    // -webkit-transform: ease(250ms);
-}
+// .menu div {
+//   /* position: absolute; */
+//     z-index: 2;
+//     top:0;
+//     width: 250px;
+//     height: 30vh;
+//     // transition: width ease(250ms);
+//     // -webkit-transform: ease(250ms);
+// }
 
-.menu.visible {
-  animation:
-    stretch
-    1.5s
-    ease-out
-    0s
-    alternate
-    infinite
-    none
-    running;
-}
+// .menu.visible {
+//   animation:
+//     stretch
+//     1.5s
+//     ease-out
+//     0s
+//     alternate
+//     infinite
+//     none
+//     running;
+// }
