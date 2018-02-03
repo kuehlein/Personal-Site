@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 
 
-export default class Home extends Component {
+export default class Blog extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -16,7 +16,7 @@ export default class Home extends Component {
   render () {
     return (
       <div>
-        Home
+        Blog
       </div>
     )
   }
@@ -24,6 +24,5 @@ export default class Home extends Component {
 }
 
 
-// very simple and elegant / minimalist
-    // include name, maybe picture, one sentace description of myself
 
+// blog posts (NOT YET)
