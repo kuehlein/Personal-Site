@@ -18,7 +18,7 @@ export default function NavFace(props) {
             <img src={ `${image}` } className='logo' />
           </div>
     }
-      <div className='speech-bubble speech-bubble-border'>
+      <div className='speech-bubble speech-bubble-border image-shadow'>
         { text }
       </div>
     </div>

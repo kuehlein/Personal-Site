@@ -10,7 +10,7 @@ export default function Home() {
       <img
         src={ me }
         alt='this is a picture of me holding a chihuahua'
-        className='image-shadow'
+        className='image-shadow position-main'
       />
       <div className='text-over-picture'>
         <h3>Writer, musician, kind of weird,</h3>

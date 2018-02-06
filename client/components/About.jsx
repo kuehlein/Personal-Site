@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div>
+    <div className='text-container image-shadow position-main'>
       About
     </div>
   )
