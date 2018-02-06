@@ -12,8 +12,7 @@ Personal promotion platform
       * offer download of pdf
 
   ### thing to include
-    * welcome! (home)
-    * elevator pitch (home)
+    * about (elevator pitch / life story)
     * examples of best work (my work)
     * locations on the web (contact)
       * linkedin, github, etc.
@@ -27,5 +26,4 @@ Personal promotion platform
 
   ### things to update
     * speech bubble
-      * clipping with main (opacity issue)
       * fade in/out (absolute positioning???)
