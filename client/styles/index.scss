@@ -7,8 +7,8 @@ html {
 
 body {
   margin: 0;
-  background-image: url('https://i.imgur.com/rw3LbXr.jpg');
-  font-family: 'Julius Sans One', sans-serif;
+  background-image: url('https://i.imgur.com/rw3LbXr.jpg'); // ('../../client/assets/gourds.png');
+  font-family: 'Cutive Mono', monospace;
 }
 
 header {
@@ -34,6 +34,21 @@ header {
 //   }
 // }
 
+.name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-position {
+  padding: 0;
+  margin: 0 0.75em 0 1.5em;
+  color: #eee;
+  text-shadow: 0.15em 0.15em 0.04em #000;
+  z-index: 1;
+  cursor: default;
+  user-select: none;
+}
+
 .logo {
   height: 3em;
   width: 3em;
@@ -45,12 +60,10 @@ header {
 }
 
 .logo-container:hover .speech-bubble, .speech-bubble:after {
-  // opacity: 1;
   display: flex;
 }
 
 .speech-bubble {
-  // opacity: 0;
   display: none;
   position: absolute;
   min-width: 8em;
@@ -60,9 +73,9 @@ header {
   border-radius: 1em;
   padding: 0.5em;
   margin: 2.22em 0 0 3.5em;
-  // transition: opacity 0.5s linear 0s;
   cursor: default;
   user-select: none;
+  z-index: 10;
 }
 
 .speech-bubble:after {
@@ -87,13 +100,26 @@ header {
 }
 
 .main-child {
-  //background-color: rgba(0, 0, 0, 0.5); // no?
-  margin: 0 0 0 2em;
-  border-radius: 0.7126em;
+  margin: 0 0 3.5em 3em;
   width: 80vw;
   height: 80vh;
-  text-align: center;
 }
+
+.text-over-picture {
+  position: absolute;
+  top: 5em;
+  left: 16.5em;
+}
+
+.image-shadow {
+  box-shadow: 0.7em 0.7em 1em #111;
+}
+
+
+
+
+
+
 
 // .menu {
 //   /* display: block; */
