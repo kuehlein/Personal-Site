@@ -6,6 +6,7 @@ Personal promotion platform
   ### style
     * tesselate face / cutouts everywhere
     * randomly generate color palettes for use on page
+    * loading spinner (gourd)
     
   ### functionality
     * display resume pdf
