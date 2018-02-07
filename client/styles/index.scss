@@ -109,25 +109,27 @@ header { // navbar
   position: absolute;
   top: 5em;
   left: 16.5em;
+  cursor: default;
+  user-select: none;
 }
 
 .image-shadow { // navbar, home, about
   box-shadow: 0.7em 0.7em 1em #111;
 }
 
-.position-main {
-  margin: 1em 0 0 0;
+.position-main { // home, about
+  width: 59em;
+  height: 40em;
+  overflow: hidden;
 }
 
 .text-container { // about
-  margin: 1em 0 0 0;
-  width: 73.15vw;
-  height: 87.635vh;
   background-color: #eee;
-  // background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
-  // border-radius: 1em;
   padding: 0.5em;
   text-align: center;
+  width: 59em;
+  height: 40em;
+  // background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
 }
 
 

@@ -5,8 +5,10 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='text-container image-shadow position-main'>
-      About
+    <div className='position-main image-shadow'>
+      <div className='text-container'>
+        About
+      </div>
     </div>
   )
 }
