@@ -7,6 +7,8 @@ Personal promotion platform
     * tesselate face / cutouts everywhere
     * randomly generate color palettes for use on page
     * loading spinner (gourd)
+    * waiter menu button
+      * photoshop my face on waiter hanging over navbar
     
   ### functionality
     * display resume pdf
