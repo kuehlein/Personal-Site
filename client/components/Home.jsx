@@ -19,7 +19,3 @@ export default function Home() {
     </div>
   )
 }
-
-// do not squash image
-// make text move based on resize
-// WORK ON ABOUT NEXT
