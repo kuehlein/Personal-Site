@@ -9,6 +9,7 @@ Personal promotion platform
     * loading spinner (gourd)
     * waiter menu button
       * photoshop my face on waiter hanging over navbar
+    * transitions between pages
     
   ### functionality
     * display resume pdf
@@ -30,3 +31,4 @@ Personal promotion platform
   ### things to update
     * speech bubble
       * fade in/out (absolute positioning???)
+    * scroll over position: fixed; name (in main)
