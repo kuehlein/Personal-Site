@@ -68,4 +68,4 @@ export default function About() {
     // indent text
 
 // scroll button disappeared (#app)
-// name position overflow (.name-position)
+// no scroll on name-container

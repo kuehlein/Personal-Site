@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   overflow: hidden;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -10,15 +11,7 @@ body {
   margin: 0;
   background-image: url('https://i.imgur.com/rw3LbXr.jpg'); // ('../../client/assets/gourds.png');
   font-family: 'Cutive Mono', monospace;
-}
-
-#app {
-  min-width: 100%;
-  min-height: 100%;
   overflow: scroll;
-
-  // scroll button disappeared
-
 }
 
 header { // navbar
@@ -48,21 +41,17 @@ header { // navbar
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  left: 7.2em;
 }
 
 .name-position { // main
   padding: 0;
-  // margin: 0 33em 0 0;
+  margin: 0;
   color: #eee;
   text-shadow: 0.15em 0.15em 0.04em #000;
-  z-index: 1;
   cursor: default;
   user-select: none;
-
-
-
-  // do not let it overflow onto main container
-
 }
 
 .logo { // navbar
