@@ -67,5 +67,4 @@ export default function About() {
 // About me, elevator pitch
     // indent text
 
-// scroll button disappeared (#app)
 // no scroll on name-container
