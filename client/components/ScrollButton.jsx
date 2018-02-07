@@ -5,20 +5,20 @@ import ReactDOM from 'react-dom'
 
 
 export default class ScrollButton extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+  componentDidMount () {
+    document.body.addEventListener('scroll', this.handleScroll)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+  componentWillUnmount () {
+    document.body.removeEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll(event) {
+  handleScroll (event) {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.getElementById('top-button').style.display = 'block'
     } else {
