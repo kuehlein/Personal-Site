@@ -66,6 +66,4 @@ export default function About() {
 
 // About me, elevator pitch
     // indent text
-// button to scroll up to the top of page
-    // fixed
-    // appears when you scroll down
+
