@@ -6,14 +6,17 @@ Personal promotion platform
   ### style
     * tesselate face / cutouts everywhere
     * randomly generate color palettes for use on page
+    * loading spinner (gourd)
+    * waiter menu button
+      * photoshop my face on waiter hanging over navbar
+    * transitions between pages
     
   ### functionality
     * display resume pdf
       * offer download of pdf
 
   ### thing to include
-    * welcome! (home)
-    * elevator pitch (home)
+    * about (elevator pitch / life story)
     * examples of best work (my work)
     * locations on the web (contact)
       * linkedin, github, etc.
@@ -27,5 +30,5 @@ Personal promotion platform
 
   ### things to update
     * speech bubble
-      * clipping with main (opacity issue)
       * fade in/out (absolute positioning???)
+    * scroll over position: fixed; name (in main)

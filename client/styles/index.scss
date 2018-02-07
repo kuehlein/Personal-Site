@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
+  overflow: hidden;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -9,9 +11,10 @@ body {
   margin: 0;
   background-image: url('https://i.imgur.com/rw3LbXr.jpg'); // ('../../client/assets/gourds.png');
   font-family: 'Cutive Mono', monospace;
+  overflow: scroll;
 }
 
-header {
+header { // navbar
   position: fixed;
   background-color: #000;
   top: 0;
@@ -34,40 +37,42 @@ header {
 //   }
 // }
 
-.name-container {
+.name-container { // main
+  position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  left: 7.2em;
 }
 
-.name-position {
+.name-position { // main
   padding: 0;
-  margin: 0 0.75em 0 1.5em;
+  margin: 0;
   color: #eee;
   text-shadow: 0.15em 0.15em 0.04em #000;
-  z-index: 1;
   cursor: default;
   user-select: none;
 }
 
-.logo {
+.logo { // navbar
   height: 3em;
   width: 3em;
 }
 
-.logo-container {
+.logo-container { // navbar
   display: flex;
   flex-direction: row;
 }
 
-.logo-container:hover .speech-bubble, .speech-bubble:after {
+.logo-container:hover .speech-bubble, .speech-bubble:after { // navbar
   display: flex;
 }
 
-.speech-bubble {
+.speech-bubble { // navbar
   display: none;
   position: absolute;
   min-width: 8em;
-  background-color: aliceblue;
+  background-color: #eee;
   color: black;
   text-align: center;
   border-radius: 1em;
@@ -75,10 +80,9 @@ header {
   margin: 2.22em 0 0 3.5em;
   cursor: default;
   user-select: none;
-  z-index: 10;
 }
 
-.speech-bubble:after {
+.speech-bubble:after { // navbar
   content: '';
   display: block; /* reduce the damage in FF3.0 */
   position: absolute;
@@ -88,10 +92,10 @@ header {
   margin: 0 0 0 0;
   border-width: 0.5em 1em 0;
   border-style: solid;
-  border-color: aliceblue transparent;
+  border-color: #eee transparent;
 }
 
-.main-container {
+.main-container { // main
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,21 +103,62 @@ header {
   width: 100vw;
 }
 
-.main-child {
-  margin: 0 0 3.5em 3em;
+.main-child { // main
+  margin: 2.5em 0 3.5em 9em;
   width: 80vw;
-  height: 80vh;
+  height: 85vh;
 }
 
-.text-over-picture {
+.text-over-picture { // home
   position: absolute;
   top: 5em;
   left: 16.5em;
+  cursor: default;
+  user-select: none;
 }
 
-.image-shadow {
+.image-shadow { // navbar, home, about
   box-shadow: 0.7em 0.7em 1em #111;
 }
+
+.position-main { // home, about
+  width: 59.83em;
+  height: 40em;
+}
+
+.center-text { // about
+  text-align: center;
+}
+
+.text-container { // about
+  padding: 2em;
+  width: 59.83em;
+  min-height: 40em;
+  margin: 0 0 3em 0;
+  box-shadow: 0.7em 0.7em 1em #111;
+  background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
+}
+
+#top-button { // scrollbutton, about
+  display: none;
+  position: fixed;
+  bottom: 2em;
+  right: 5em;
+  background-color: #eee;
+  color: black;
+  text-align: center;
+  border-radius: 1em;
+  padding: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#top-button:hover {
+  background-color: #ccc;
+}
+
 
 
 
