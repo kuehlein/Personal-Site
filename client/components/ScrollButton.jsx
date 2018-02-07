@@ -34,7 +34,11 @@ export default class ScrollButton extends Component {
   render () {
     return (
       <div onScroll={ this.handleScroll }>
-        <button onClick={ this.scrollToTop } id='top-button'>
+        <button
+          onClick={ this.scrollToTop }
+          id='top-button'
+          className='image-shadow'
+        >
           Top
         </button>
       </div>
