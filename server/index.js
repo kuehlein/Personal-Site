@@ -30,6 +30,8 @@ const createApp = () => {
     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
 
+  app.use('/dist', express.static(path.join(__dirname, 'dist')))
+
   // error handling endware
   app.use((err, req, res, next) => {
     console.error(err)

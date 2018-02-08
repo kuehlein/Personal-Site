@@ -14,7 +14,7 @@ setOptions({
 })
 
 
-class Resume extends Component {
+export default class Resume extends Component {
   constructor (props) {
     super(props)
     this.state = {

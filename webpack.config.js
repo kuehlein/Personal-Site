@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: './client/app.jsx',
   output: {
-    path: path.join(__dirname, 'public/dist'),
+    path: path.join(__dirname, './public/dist'),
     filename: 'bundle.js'
   },
   devtool: 'source-map',
