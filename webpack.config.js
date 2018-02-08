@@ -1,10 +1,13 @@
 'use strict'
 
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+
 module.exports = {
   entry: './client/app.jsx',
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: './public/build/bundle.js'
   },
   devtool: 'source-map',
   module: {
@@ -34,9 +37,21 @@ module.exports = {
             }
           }
         ]
+      }, {
+        test: /\.(pdf)$/,
+        loader: 'file-loader?name=[path][name].[ext]',
+        include: /client\/assets/
       }
     ]
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'node_modules/pdfjs-dist/cmaps/',
+        to: 'cmaps/'
+      },
+    ])
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.png', '*']
   }

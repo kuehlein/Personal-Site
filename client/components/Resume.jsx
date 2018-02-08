@@ -1,47 +1,48 @@
 'use strict'
 
-// import React, { Component } from 'react'
-// import { Page } from 'react-pdf' // Document
-// import { Document } from 'react-pdf/build/entry.webpack'
+import React, { Component } from 'react'
+
+// import { Page } from 'react-pdf'
+import { Document, Page, setOptions } from 'react-pdf/build/entry.webpack'
+
+import resume from '../assets/resume.pdf'
 
 
-// class Resume extends Component {
-//   constructor (props) {
-//     super(props)
-//     this.state = {
-//       numPages: null,
-//       pageNumber: 1,
-//     }
-//   }
-
-//   onDocumentLoad ({ numPages }) {
-//     this.setState({ numPages })
-//   }
-
-//   render() {
-//     const { pageNumber, numPages } = this.state
-
-//     return (
-//       <div>
-//         <Document
-//           file='resume.pdf'
-//           onLoadSuccess={ this.onDocumentLoad }
-//         >
-//           <Page pageNumber={ pageNumber } />
-//         </Document>
-//         <p>Page { pageNumber } of { numPages }</p>
-//       </div>
-//     )
-//   }
-// }
+setOptions({
+  cMapUrl: 'cmaps/',
+  cMapPacked: true,
+})
 
 
+class Resume extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      numPages: null,
+      pageNumber: 1,
+    }
+  }
 
+  onDocumentLoad ({ numPages }) {
+    this.setState({ numPages })
+  }
 
+  render() {
+    const { pageNumber, numPages } = this.state
 
-
-
-
+    return (
+      <div>
+        <Document
+          file='resume.pdf'
+          onLoadSuccess={ this.onDocumentLoad }
+        >
+          <Page pageNumber={ pageNumber } />
+        </Document>
+        <p>Page { pageNumber } of { numPages }</p>
+      </div>
+    )
+  }
+}
 
 
 
@@ -120,19 +121,21 @@
 
 
 
-import React from 'react'
-import PDF from 'react-pdf'
-import resume from '../assets/resume.pdf'
+// import React from 'react'
+// import PDF from 'react-pdf'
+// import { Document } from 'react-pdf/build/entry.webpack'
+
+// import resume from '../assets/resume.pdf'
 
 
-export default function Resume() {
-  return (
-    <div>
-      Resume
-      {/* <PDF file={ resume } scale={ 1.5 } /> */}
-    </div>
-  )
-}
+// export default function Resume() {
+//   return (
+//     <div>
+//       Resume
+//       {/* <PDF file={ resume } scale={ 1.5 } /> */}
+//     </div>
+//   )
+// }
 
 
-// experience / resume
+// // experience / resume
