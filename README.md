@@ -14,9 +14,11 @@ Personal promotion platform
   ### functionality
     * display resume pdf
       * offer download of pdf
+    * contact info (email, phone)
+      * add a copy button
+      * mailto for email?
 
   ### thing to include
-    * about (elevator pitch / life story)
     * examples of best work (my work)
     * locations on the web (contact)
       * linkedin, github, etc.
