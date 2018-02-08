@@ -25,12 +25,13 @@ const createApp = () => {
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))
 
+  // staticly serve styles
+  app.use(express.static(path.join(__dirname, '..', 'client', 'styles')))
+
   // sends index.html
   app.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
-
-  app.use('/dist', express.static(path.join(__dirname, 'dist')))
 
   // error handling endware
   app.use((err, req, res, next) => {
