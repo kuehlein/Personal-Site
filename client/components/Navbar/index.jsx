@@ -26,7 +26,7 @@ export default class Navbar extends Component {
       <header>
         <NavFace
           text={ 'Click my face to go home 🏚' }
-          image={ 'favicon.ico' }
+          image={ 'homeFace.ico' }
           route={ '' }
         />
         <NavFace
