@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 
-// import { Page } from 'react-pdf'
 import { Document, Page, setOptions } from 'react-pdf/build/entry.webpack'
 
 import resume from '../assets/resume.pdf'
@@ -11,6 +10,7 @@ import resume from '../assets/resume.pdf'
 setOptions({
   cMapUrl: 'cmaps/',
   cMapPacked: true,
+  //workerSrc: 'my-path-to-worker.js'
 })
 
 

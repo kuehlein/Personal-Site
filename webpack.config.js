@@ -48,11 +48,11 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'node_modules/pdfjs-dist/cmaps/',
-        to: 'cmaps/'
+        to: './public/build/cmaps/'
       },
     ])
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.png', '*']
+    extensions: ['.js', '.jsx', '.png', '.pdf', '*']
   }
 }
