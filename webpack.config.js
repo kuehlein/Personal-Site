@@ -1,18 +1,22 @@
 'use strict'
 
+const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 module.exports = {
   entry: './client/app.jsx',
   output: {
-    path: __dirname,
-    filename: './public/build/bundle.js'
+    path: path.join(__dirname, 'public/dist'),
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
     rules: [
       {
+        test: /\.pdf$/,
+        use: 'url-loader'
+      }, {
         test: /\.jsx?$/,
         include: /client/,
         exclude: /(node_modules|bower_components)/,
@@ -21,7 +25,7 @@ module.exports = {
           presets: ['react', 'es2015'],
         }
       }, {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           'style-loader',
           'css-loader',
@@ -37,19 +41,14 @@ module.exports = {
             }
           }
         ]
-      }, {
-        test: /\.(pdf)$/,
-        loader: 'file-loader?name=[path][name].[ext]',
-        include: /client\/assets/
       }
     ]
   },
   plugins: [
     new CopyWebpackPlugin([
-      {
-        from: 'node_modules/pdfjs-dist/cmaps/',
-        to: './public/build/cmaps/'
-      },
+      { from: './public/index.html' },
+      { from: './client/assets/resume.pdf' },
+      { from: 'node_modules/pdfjs-dist/cmaps/', to: 'cmaps/' }
     ])
   ],
   resolve: {

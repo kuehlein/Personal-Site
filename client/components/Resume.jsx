@@ -33,7 +33,7 @@ class Resume extends Component {
     return (
       <div>
         <Document
-          file='resume.pdf'
+          file={ resume }
           onLoadSuccess={ this.onDocumentLoad }
         >
           <Page pageNumber={ pageNumber } />
@@ -45,6 +45,17 @@ class Resume extends Component {
 }
 
 
+
+/*
+{
+        test: /\.pdf$/,
+        include: path.join(__dirname, 'node_modules/react-pdf/build/entry.webpack'),
+        use: [
+          'url-loader',
+          'file-loader'
+        ]
+      }
+*/
 
 
 
