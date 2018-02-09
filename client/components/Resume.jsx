@@ -1,7 +1,6 @@
 'use strict'
 
 import React, { Component } from 'react'
-
 import { Document, Page, setOptions } from 'react-pdf/build/entry.webpack'
 
 import resume from '../assets/resume.pdf'
