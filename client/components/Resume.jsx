@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { Document, Page, setOptions } from 'react-pdf/build/entry.webpack'
+import { Document, Page, setOptions } from 'react-pdf/build/entry.noworker'
 
 import resume from '../assets/resume.pdf'
 
@@ -9,7 +9,7 @@ import resume from '../assets/resume.pdf'
 setOptions({
   cMapUrl: 'cmaps/',
   cMapPacked: true,
-  //workerSrc: 'my-path-to-worker.js'
+  // workerSrc: '1a4953075f808eb6a767.worker.js'
 })
 
 
@@ -22,8 +22,8 @@ export default class Resume extends Component {
     }
   }
 
-  onDocumentLoad ({ numPages }) {
-    this.setState({ numPages })
+  onDocumentLoad = ({ numPages }) => {
+    this.setState({ numPages: 1 })
   }
 
   render() {
@@ -44,18 +44,7 @@ export default class Resume extends Component {
 }
 
 
-
-/*
-{
-        test: /\.pdf$/,
-        include: path.join(__dirname, 'node_modules/react-pdf/build/entry.webpack'),
-        use: [
-          'url-loader',
-          'file-loader'
-        ]
-      }
-*/
-
+// worker-loader
 
 
 
