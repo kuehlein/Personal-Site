@@ -37,7 +37,14 @@ export default class Resume extends Component {
         >
           <Page pageNumber={ pageNumber } />
         </Document>
-        <p>Page { pageNumber } of { numPages }</p>
+        {/* <p>Page { pageNumber } of { numPages }</p> */}
+        <a
+          href={ resume }
+          download="Kyle_Uehlein_Resume.pdf"
+          className="download-button"
+        >
+          Download
+        </a>
       </div>
     )
   }

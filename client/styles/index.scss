@@ -159,7 +159,22 @@ header { // navbar
   background-color: #ccc;
 }
 
+.download-button {
+  background-color: #eee;
+  color: black;
+  text-align: center;
+  border-radius: 1em;
+  padding: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
 
+.download-button:hover {
+  background-color: #ccc;
+}
 
 
 
