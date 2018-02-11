@@ -6,12 +6,12 @@ import me from '../assets/self1.png'
 
 export default function Home() {
   return (
-    <div className='position-main image-shadow'>
+    <div className="position-main image-shadow">
       <img
         src={ me }
-        alt='this is a picture of me holding a chihuahua'
+        alt="this is a picture of me holding a chihuahua"
       />
-      <div className='text-over-picture'>
+      <div className="text-over-picture">
         <h3>Writer, musician, kind of weird,</h3>
         <h3>but in a good way.</h3>
         <h5>(and developer of course)</h5>
