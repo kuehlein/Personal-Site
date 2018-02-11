@@ -38,7 +38,7 @@ export default class Resume extends Component {
             onLoadSuccess={ this.onDocumentLoad }
             className="resume-pdf"
           >
-            <Page pageNumber={ pageNumber } scale="1.6111"/>
+            <Page pageNumber={ pageNumber } scale={ 1.6111 }/>
           </Document>
         </div>
         {/* <p>Page { pageNumber } of { numPages }</p> */}
