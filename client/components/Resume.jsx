@@ -20,7 +20,7 @@ export default class Resume extends Component {
       numPages: null,
       pageNumber: 1,
     }
-    this.onDocumentLoad = this.onDocumentLoad.bind(this)
+    // this.onDocumentLoad = this.onDocumentLoad.bind(this)
   }
 
   onDocumentLoad ({ numPages }) {
