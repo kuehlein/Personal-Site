@@ -139,11 +139,11 @@ header { // navbar
   background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
 }
 
-#top-button { // scrollbutton, about
+#top-button { // scrollbutton, about, resume
   display: none;
   position: fixed;
   bottom: 2em;
-  right: 5em;
+  right: 2.7em;
   background-color: #eee;
   color: black;
   text-align: center;
@@ -153,15 +153,52 @@ header { // navbar
   outline: none;
   cursor: pointer;
   user-select: none;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1em;
 }
 
-#top-button:hover {
+#top-button:hover { // scrollbutton, about, resume
   background-color: #ccc;
 }
 
+.resume-container { // resume
+  display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+}
 
+.resume-pdf { // resume
+  width: 59.83em;
+  min-height: 40em;
+  margin: 0 0 3em 0;
+  box-shadow: 0.7em 0.7em 1em #111;
+}
 
+.button-container { // resume
+  font-family: 'Cutive Mono', monospace;
+  position: fixed;
+  font-size: 1em;
+  top: 2em;
+  right: 1.1em;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 1em;
+  padding: 1em;
+  border: none;
+  outline: none;
+  box-shadow: 0.7em 0.7em 1em #111;
+  cursor: pointer;
+  user-select: none;
+}
 
+.button-container:hover { // resume
+  background-color: #ccc;
+}
+
+.button-download { // resume
+  text-decoration: none;
+  color: #000;
+}
 
 
 
