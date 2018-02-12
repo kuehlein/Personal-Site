@@ -28,7 +28,7 @@ export default class Navbar extends Component {
     return (
       <header>
         <NavFace
-          text={ "Click my face to go home 🏚" }
+          text={ "There's no place like home..." }
           image={ "homeFace.ico" }
           route={ "" }
           />
