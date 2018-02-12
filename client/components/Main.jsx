@@ -28,3 +28,7 @@ export default function Main(props) {
     </div>
   )
 }
+
+
+// fix z index of page
+// add transitions to pages

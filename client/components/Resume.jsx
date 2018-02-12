@@ -19,8 +19,14 @@ export default class Resume extends Component {
     this.state = {
       numPages: null,
       pageNumber: 1,
+      transition: 'in'
     }
     this.onDocumentLoad = this.onDocumentLoad.bind(this)
+  }
+
+  componentWillUnmount() {
+    this.setState({ transition: 'out' })
+    console.log('unmount state', this.state)
   }
 
   onDocumentLoad ({ numPages }) {
@@ -30,10 +36,11 @@ export default class Resume extends Component {
   render() {
     const { pageNumber, numPages } = this.state
     document.title = "My Resume"
+    console.log('render state', this.state)
 
     return (
       <div>
-        <div className="resume-container">
+        <div className={`resume-container fade-${this.state.transition}`}>
           <Document
             file={ resume }
             onLoadSuccess={ this.onDocumentLoad }

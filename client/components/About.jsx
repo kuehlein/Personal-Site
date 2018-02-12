@@ -8,7 +8,7 @@ export default function About() {
   document.title = "Who am I?"
 
   return (
-    <div className='position-main'>
+    <div className='position-main fade-in'>
       <div className='text-container'>
         <h1 className='center-text'>$ whoami</h1> {/* animate blinking cursor */}
         <p>

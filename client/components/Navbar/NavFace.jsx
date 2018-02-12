@@ -14,13 +14,15 @@ export default function NavFace(props) {
         ? <Link to={ `/${route}` }>
             <img src={ `${image}` } className="logo" />
           </Link>
-        : <div onClick={ () => handleClick(visible) }>
-            <img src={ `${image}` } className="menu-toggle" />
-          </div>
+        : <img
+            src={ `${image}` }
+            onClick={ () => handleClick(visible) }
+            className="menu-toggle"
+          />
     }
-      <div className="speech-bubble speech-bubble-border image-shadow">
-        { text }
-      </div>
+    <div className="speech-bubble image-shadow">
+      { text }
     </div>
+  </div>
   )
 }

@@ -18,7 +18,7 @@ export default class AppRoutes extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 600)
+    }, 800)
   }
 
   render() {
@@ -27,7 +27,9 @@ export default class AppRoutes extends Component {
       <div>
         {
           this.state.loading
-            ? <img src={ gourdSpinner } className="gourd-spinner" />
+            ? <div className="spinner-container">
+                <img src={ gourdSpinner } className="gourd-spinner" />
+              </div>
             : <Main>
                 <Switch>
                   <Route exact path="/" component={ Home } />
