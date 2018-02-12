@@ -52,9 +52,4 @@ export default function About() {
   )
 }
 
-
-
-// About me, elevator pitch
-    // indent text
-
-// no scroll on name-container
+// indent text
