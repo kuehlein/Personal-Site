@@ -16,6 +16,9 @@ body {
 
 header { // navbar
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background-color: #000;
   top: 0;
   left: 0;
@@ -43,6 +46,7 @@ header { // navbar
   flex-direction: column;
   justify-content: flex-start;
   left: 7.2em;
+  z-index: -1;
 }
 
 .name-position { // main
@@ -59,6 +63,11 @@ header { // navbar
   width: 3em;
 }
 
+.menu-toggle { // navbar
+  height: 20em;
+  margin-left: -2em;
+}
+
 .logo-container { // navbar
   display: flex;
   flex-direction: row;
@@ -66,6 +75,7 @@ header { // navbar
 
 .logo-container:hover .speech-bubble, .speech-bubble:after { // navbar
   display: flex;
+  justify-content: center;
 }
 
 .speech-bubble { // navbar
@@ -157,14 +167,12 @@ header { // navbar
   font-size: 1em;
 }
 
-#top-button:hover { // scrollbutton, about, resume
+#top-button:hover { // scrollbutton, about
   background-color: #ccc;
 }
 
 .resume-container { // resume
   display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
 }
 
 .resume-pdf { // resume
@@ -200,6 +208,16 @@ header { // navbar
   color: #000;
 }
 
+.social-link-container {
+  padding: 0.2em;
+}
+
+.social-link {
+  height: 2em;
+  width: 2em;
+  margin: 0 0 0 0.3em;
+}
+
 // .twitter-icon {
 //   background: #4099FF;
 //   color: #fff;
@@ -207,12 +225,6 @@ header { // navbar
 // }
 
 
-
-// .menu {
-//   /* display: block; */
-//   display: flex;
-//   width: 100vw;
-//   background: #442200;
 
   /* width: 100px;
     height: 100px;

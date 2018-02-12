@@ -50,8 +50,8 @@ export default class Resume extends Component {
           >
             Download
           </a>
-          <ScrollButton />
         </div>
+        <ScrollButton />
       </div>
     )
   }

@@ -4,10 +4,13 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavFace from './NavFace'
 import Menu from './Menu'
+import SocailLinks from './SocialLinks'
+
+import waiter from '../../assets/waiter.png'
 
 
 export default class Navbar extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       visible: false
@@ -15,56 +18,54 @@ export default class Navbar extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick (toggle) {
+  handleClick(toggle) {
     this.setState({ visible: !toggle })
   }
 
-  render () {
+  render() {
     const { visible } = this.state
 
     return (
       <header>
         <NavFace
-          text={ 'Click my face to go home 🏚' }
-          image={ 'homeFace.ico' }
-          route={ '' }
-        />
-        <NavFace
-          text={ 'open the menu bby 😘' }
-          image={ 'favicon.ico' }
-          handleClick={ this.handleClick }
-          visible={ visible }
-        />
-        {
-          visible &&
-          <Menu visible={ visible }> {/* unnecessary? */}
-            <NavFace
-              text={ '$ whoami' }
-              image={ 'favicon.ico' }
-              route={ 'about' }
-            />
-            <NavFace
-              text={ 'i made this stuff 🛠' }
-              image={ 'favicon.ico' }
-              route={ 'projects' }
-            />
-            <NavFace
-              text={ 'musings on software 📝' }
-              image={ 'favicon.ico' }
-              route={ 'blog' }
-            />
-            <NavFace
-              text={ 'check out mah stats bruh 🧠' }
-              image={ 'favicon.ico' }
-              route={ 'resume' }
-            />
-            <NavFace
-              text={ 'stalk me with this info 👀' }
-              image={ 'favicon.ico' }
-              route={ 'contact' }
-            />
-          </Menu>
-        }
+          text={ "Click my face to go home 🏚" }
+          image={ "homeFace.ico" }
+          route={ "" }
+          />
+        <div>
+          <NavFace
+            text={ "Menu?" }
+            image={ waiter }
+            handleClick={ this.handleClick }
+            visible={ visible }
+          />
+          {
+            visible &&
+            <Menu visible={ visible }> {/* unnecessary? */}
+              <NavFace
+                text={ "$ whoami" }
+                image={ "favicon.ico" }
+                route={ "about" }
+              />
+              {/* <NavFace
+                text={ "i made this stuff 🛠" }
+                image={ "favicon.ico" }
+                route={ "projects" }
+              />
+              <NavFace
+                text={ "musings on software 📝" }
+                image={ "favicon.ico" }
+                route={ "blog" }
+              /> */}
+              <NavFace
+                text={ "check out mah stats bruh 🧠" }
+                image={ "favicon.ico" }
+                route={ "resume" }
+              />
+            </Menu>
+          }
+        </div>
+        <SocailLinks />
       </header>
     )
   }
