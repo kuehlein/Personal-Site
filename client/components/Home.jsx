@@ -5,6 +5,8 @@ import me from '../assets/self1.png'
 
 
 export default function Home() {
+  document.title = "Kyle Uehlein 🏠"
+
   return (
     <div className="position-main image-shadow">
       <img

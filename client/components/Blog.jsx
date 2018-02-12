@@ -14,6 +14,8 @@ export default class Blog extends Component {
   }
 
   render () {
+    document.title = "My Blog Posts"
+
     return (
       <div>
         Blog

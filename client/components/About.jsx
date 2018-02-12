@@ -5,6 +5,8 @@ import { ScrollButton } from './'
 
 
 export default function About() {
+  document.title = "Who am I?"
+
   return (
     <div className='position-main'>
       <div className='text-container'>

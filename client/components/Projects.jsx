@@ -14,6 +14,8 @@ export default class Projects extends Component {
   }
 
   render () {
+    document.title = "My Projects"
+
     return (
       <div>
         Projects

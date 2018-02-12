@@ -9,9 +9,9 @@ html {
 
 body {
   margin: 0;
-  background-image: url('https://i.imgur.com/rw3LbXr.jpg'); // ('../../client/assets/gourds.png');
+  // background-image: url('https://i.imgur.com/rw3LbXr.jpg'); // ('../../client/assets/gourds.png');
   font-family: 'Cutive Mono', monospace;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 header { // navbar
@@ -46,7 +46,7 @@ header { // navbar
   flex-direction: column;
   justify-content: flex-start;
   left: 7.2em;
-  z-index: -1;
+  z-index: 0;
 }
 
 .name-position { // main
@@ -90,6 +90,7 @@ header { // navbar
   margin: 2.22em 0 0 3.5em;
   cursor: default;
   user-select: none;
+  z-index: 1;
 }
 
 .speech-bubble:after { // navbar
@@ -103,9 +104,12 @@ header { // navbar
   border-width: 0.5em 1em 0;
   border-style: solid;
   border-color: #eee transparent;
+  z-index: 1;
 }
 
-.main-container { // main
+#main-container { // main
+  background-image: url('https://i.imgur.com/rw3LbXr.jpg');
+  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,14 +212,25 @@ header { // navbar
   color: #000;
 }
 
-.social-link-container {
+.social-link-container { // navbar
   padding: 0.2em;
 }
 
-.social-link {
+.social-link { // navbar
   height: 2em;
   width: 2em;
   margin: 0 0 0 0.3em;
+}
+
+.gourd-spinner { // main
+  width: 10em;
+  height: 10em;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin { // main
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 // .twitter-icon {
