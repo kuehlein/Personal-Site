@@ -11,15 +11,15 @@ export default class ScrollButton extends Component {
   }
 
   componentDidMount () {
-    document.body.addEventListener('scroll', this.handleScroll)
+    document.getElementById('main-container').addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount () {
-    document.body.removeEventListener('scroll', this.handleScroll)
+    document.getElementById('main-container').removeEventListener('scroll', this.handleScroll)
   }
 
   handleScroll (event) {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.getElementById('main-container').scrollTop > 20) {
       document.getElementById('top-button').style.display = 'block'
     } else {
       document.getElementById('top-button').style.display = 'none'
@@ -27,8 +27,7 @@ export default class ScrollButton extends Component {
   }
 
   scrollToTop () {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
+    document.getElementById('main-container').scrollTop = 0
   }
 
   render () {
