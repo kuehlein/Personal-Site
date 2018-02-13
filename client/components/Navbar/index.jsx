@@ -6,7 +6,9 @@ import NavFace from './NavFace'
 import Menu from './Menu'
 import SocailLinks from './SocialLinks'
 
+import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
+import face1 from '../../assets/face1.png'
 
 
 export default class Navbar extends Component {
@@ -42,17 +44,17 @@ export default class Navbar extends Component {
 
   render() {
     const { visible } = this.state
-console.log('hit', visible)
+
     return (
       <header>
         <NavFace
-          text={ "There's no place like home..." }
-          image={ "homeFace.ico" }
-          route={ "" }
+          text="There's no place like home..."
+          image={ homeFace }
+          route=""
           />
         <div>
           <NavFace
-            text={ "Menu?" }
+            text="Menu?"
             image={ waiter }
             handleClick={ this.handleClick }
             visible={ visible }
@@ -60,9 +62,9 @@ console.log('hit', visible)
           {
             <Menu visible={ visible }>
               <NavFace
-                text={ "$ whoami" }
-                image={ "favicon.ico" }
-                route={ "about" }
+                text="$ whoami"
+                image={ face1 }
+                route="about"
               />
               {/* <NavFace
                 text={ "i made this stuff 🛠" }
@@ -75,9 +77,9 @@ console.log('hit', visible)
                 route={ "blog" }
               /> */}
               <NavFace
-                text={ "check out mah stats bruh 🧠" }
-                image={ "favicon.ico" }
-                route={ "resume" }
+                text="check out mah stats bruh 🧠"
+                image={ face1 }
+                route="resume"
               />
             </Menu>
           }
@@ -90,9 +92,6 @@ console.log('hit', visible)
 }
 
 // fade out
-    // with location change
     // page itself ???
 
 // move heads when menu open
-
-// clicking on home renders other nav options
