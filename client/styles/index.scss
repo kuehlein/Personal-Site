@@ -316,7 +316,7 @@ header { // navbar
 }
 
 .fade-out-menu {
-  animation: fade-out-menu 1.5s ease-out;
+  animation: fade-out-menu 1s ease-out;
   animation-fill-mode: forwards;
   padding: 0;
   margin: 0;
@@ -342,17 +342,17 @@ header { // navbar
 }
 
 .invisible > div {
-  display: none;
+  // display: none;
 }
 
 @keyframes face-slide-in { // main
-  0% { transform: translate(0em, 0em); display: auto; }
+  0% { transform: translate(0, 0); display: auto; }
   100% { transform: translate(10em, 10em); }
 }
 
 @keyframes face-slide-out { // main
   0% { transform: translate(10em, 10em); display: auto; }
-  100% { transform: translate(0em, 0em); display: none; }
+  100% { transform: translate(0, 0); display: none; }
 }
 
 @keyframes face-fade-out { // navbar
@@ -361,26 +361,20 @@ header { // navbar
 }
 
 .face-slide { // navbar
-
+  position: relative;
 }
 
-#menu.slide-in > .face-slide { // navbar
+.visible > div { // navbar
   animation: face-slide-in 1.2s ease-out;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
 }
 
-#menu.slide-out > .face-slide { // navbar
+.invisible > div { // navbar
   animation: face-slide-out 1.2s ease-out;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
 }
 
-#menu.face-fade-out > .face-slide { // navbar
+.fade-out-menu > div { // navbar
   animation: face-fade-out 1.2s ease-out;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
 }

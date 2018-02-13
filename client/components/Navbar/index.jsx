@@ -90,5 +90,3 @@ export default class Navbar extends Component {
   }
 
 }
-
-// move heads when menu open
