@@ -97,6 +97,7 @@ header { // navbar
 }
 
 .logo-container { // navbar
+  display: flex;
   padding: 0;
   margin: 0;
 }
@@ -321,6 +322,10 @@ header { // navbar
   margin: 0;
 }
 
+.fade-out-menu > div {
+  display: none;
+}
+
 .initial { // navbar
   display: none;
   width: 0vw;
@@ -338,6 +343,10 @@ header { // navbar
   animation-fill-mode: forwards;
   padding: 0;
   margin: 0;
+}
+
+.invisible > div {
+  display: none;
 }
 
 .face-slide { // navbar
