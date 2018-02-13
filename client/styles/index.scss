@@ -13,16 +13,6 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
-#app {
-  // z-index: -2;
-  // position: relative;
-}
-
-// #app > div {
-//   z-index: -2;
-//   position: relative;
-// }
-
 header { // navbar
   position: fixed;
   display: flex;
@@ -50,23 +40,18 @@ header { // navbar
 // }
 
 @keyframes fade-in { // main, home, resume, about
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes fade-out { // home, resume, about
-  0% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
-  100% {
-    opacity: 0;
-  }
+@keyframes fade-out-menu { // navbar
+  0% { opacity: 1; display: auto; }
+  100% { opacity: 0; width: 0vw; display: none; }
 }
 
 #main-container { // main
@@ -88,6 +73,10 @@ header { // navbar
 
 .fade-out {
   animation: fade-out 0.5s linear;
+}
+
+.fade-out-menu {
+  animation: fade-out 10.5s linear;
 }
 
 .main-child { // main
@@ -125,6 +114,7 @@ header { // navbar
 .logo { // navbar
   height: 3em;
   width: 3em;
+  user-select: none;
 }
 
 .menu-toggle { // navbar
@@ -132,6 +122,7 @@ header { // navbar
   margin: 0 0 0 -2em;
   transition: margin ease 0.5s;
   z-index: 1;
+  user-select: none;
 }
 
 .menu-toggle:hover { // navbar
@@ -179,11 +170,12 @@ header { // navbar
 }
 
 .text-over-picture { // home
-  position: absolute;
-  top: 5em;
-  left: 16.5em;
+  position: relative;
+  top: -38.1em;
+  left: 4em;
   cursor: default;
   user-select: none;
+  z-index: 0;
 }
 
 .image-shadow { // navbar, home, about
@@ -191,8 +183,10 @@ header { // navbar
 }
 
 .position-main { // home, about
+  position: relative;
   width: 59.83em;
   height: 40em;
+  z-index: -1;
 }
 
 .center-text { // about, contact
@@ -225,6 +219,7 @@ header { // navbar
   user-select: none;
   font-family: 'Cutive Mono', monospace;
   font-size: 1em;
+  z-index: -1;
 }
 
 #top-button:hover { // scrollbutton, about
@@ -240,6 +235,7 @@ header { // navbar
   min-height: 40em;
   margin: 0 0 3em 0;
   box-shadow: 0.7em 0.7em 1em #111;
+  z-index: -1;
 }
 
 .button-container { // resume
@@ -257,6 +253,7 @@ header { // navbar
   box-shadow: 0.7em 0.7em 1em #111;
   cursor: pointer;
   user-select: none;
+  z-index: -1;
 }
 
 .button-container:hover { // resume
@@ -276,6 +273,7 @@ header { // navbar
   height: 2em;
   width: 2em;
   margin: 0 0 0 0.3em;
+  user-select: none;
 }
 
 .spinner-container {
@@ -297,50 +295,41 @@ header { // navbar
   100% { transform: rotate(360deg); }
 }
 
+@keyframes slide-in { // main
+  0% { width: 0vw; display: auto; opacity: 0; }
+  100% { width: 100vw; opacity: 1; }
+}
 
+@keyframes slide-out { // main
+  0% { width: 100vw; display: auto; opacity: 1; }
+  100% { width: 0vw; display: none; opacity: 0; }
+}
 
-  /* width: 100px;
-    height: 100px;
-    background: red;
-    position :relative;
-    -webkit-animation: mymove 5s infinite; */
-    // animation: mymove 5s infinite;
-// }
+#menu { // navbar
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: -1;
+}
 
-// @keyframes mymove {
-//   from {left: 0vw;}
-//   to {left: 100vw;}
-// }
-/*
-@-webkit-keyframes mymove {
-  from {left: 0px;}
-  to {left: 200px;}
-} */
+.initial { // navbar
+  display: none;
+  width: 0vw;
+}
 
+.visible { // navbar
+  animation: slide-in 1.2s ease-out;
+  animation-fill-mode: forwards;
+}
 
+.invisible { // navbar
+  animation: slide-out 1.2s ease-in;
+  animation-fill-mode: forwards;
+}
 
-// .post-div {
-//  animation: green-fade 5s ease-in 1;
-// }
+.face-slide { // navbar
 
-// .menu div {
-//   /* position: absolute; */
-//     z-index: 2;
-//     top:0;
-//     width: 250px;
-//     height: 30vh;
-//     // transition: width ease(250ms);
-//     // -webkit-transform: ease(250ms);
-// }
+}
 
-// .menu.visible {
-//   animation:
-//     stretch
-//     1.5s
-//     ease-out
-//     0s
-//     alternate
-//     infinite
-//     none
-//     running;
-// }

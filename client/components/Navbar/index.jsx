@@ -13,13 +13,20 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      visible: false
+      visible: 'initial'
     }
     this.handleClick = this.handleClick.bind(this)
+    this.handleLocationChange = this.handleClick.bind(this)
   }
 
   handleClick(toggle) {
-    this.setState({ visible: !toggle })
+    typeof toggle === 'string'
+      ? this.setState({ visible: !!toggle })
+      : this.setState({ visible: !toggle })
+  }
+
+  componentWillReceiveProps() { // ???
+    this.setState({ visible: 'fade-out' })
   }
 
   render() {
@@ -40,8 +47,7 @@ export default class Navbar extends Component {
             visible={ visible }
           />
           {
-            visible &&
-            <Menu visible={ visible }> {/* unnecessary? */}
+            <Menu visible={ visible }>
               <NavFace
                 text={ "$ whoami" }
                 image={ "favicon.ico" }

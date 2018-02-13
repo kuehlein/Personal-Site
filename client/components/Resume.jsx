@@ -26,7 +26,7 @@ export default class Resume extends Component {
 
   componentWillUnmount() {
     this.setState({ transition: 'out' })
-    console.log('unmount state', this.state)
+    // console.log('unmount state', this.state)
   }
 
   onDocumentLoad ({ numPages }) {
@@ -36,7 +36,7 @@ export default class Resume extends Component {
   render() {
     const { pageNumber, numPages } = this.state
     document.title = "My Resume"
-    console.log('render state', this.state)
+    // console.log('render state', this.state)
 
     return (
       <div>

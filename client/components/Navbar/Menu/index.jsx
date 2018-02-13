@@ -4,17 +4,13 @@ import React from 'react'
 
 
 export default function Menu(props) {
-  const visibilityClass = `${props.visible ? 'visible' : ''}`
+  const visibilityClass = `${props.visible ? 'visible' : 'invisible'}`
 
   return (
-    <div className='menu'>
-      <div className='visible'>
+    <div id="menu">
+      <div className={ typeof props.visible === "string" ? props.visible : visibilityClass }>
         { props.children }
       </div>
     </div>
   )
-
 }
-
-
-// because menu is not 'hidden', there is no transition when it becomes visible
