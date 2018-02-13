@@ -13,10 +13,19 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      visible: 'initial'
+      visible: 'initial',
+      page: ''
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handleLocationChange = this.handleClick.bind(this)
+    this.handleLocationChange = this.handleLocationChange.bind(this)
+  }
+
+  componentDidMount() {
+    window.addEventListener('popstate', this.handleLocationChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('popstate', this.handleLocationChange)
   }
 
   handleClick(toggle) {
@@ -25,13 +34,15 @@ export default class Navbar extends Component {
       : this.setState({ visible: !toggle })
   }
 
-  componentWillReceiveProps() { // ???
-    this.setState({ visible: 'fade-out' })
+  handleLocationChange() {
+    if (this.state.page !== window.location.href) {
+      this.setState({ page: window.location.href, visible: 'fade-out-menu' })
+    }
   }
 
   render() {
     const { visible } = this.state
-
+console.log('hit', visible)
     return (
       <header>
         <NavFace
@@ -77,3 +88,16 @@ export default class Navbar extends Component {
   }
 
 }
+
+// fade out
+    // with location change
+    // page itself ???
+
+// move heads when menu open
+
+// clicking on home renders other nav options
+
+// speech bubble
+    // they moved
+    // hover messed up
+    // opacity
