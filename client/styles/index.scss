@@ -345,7 +345,42 @@ header { // navbar
   display: none;
 }
 
+@keyframes face-slide-in { // main
+  0% { transform: translate(0em, 0em); display: auto; }
+  100% { transform: translate(10em, 10em); }
+}
+
+@keyframes face-slide-out { // main
+  0% { transform: translate(10em, 10em); display: auto; }
+  100% { transform: translate(0em, 0em); display: none; }
+}
+
+@keyframes face-fade-out { // navbar
+  0% { opacity: 0.8; display: auto; }
+  100% { opacity: 0; display: none; }
+}
+
 .face-slide { // navbar
 
 }
 
+#menu.slide-in > .face-slide { // navbar
+  animation: face-slide-in 1.2s ease-out;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 20em;
+}
+
+#menu.slide-out > .face-slide { // navbar
+  animation: face-slide-out 1.2s ease-out;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 20em;
+}
+
+#menu.face-fade-out > .face-slide { // navbar
+  animation: face-fade-out 1.2s ease-out;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 20em;
+}

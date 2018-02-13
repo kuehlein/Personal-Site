@@ -62,7 +62,7 @@ export default class Navbar extends Component {
           {
             <Menu visible={ visible }>
               <NavFace
-                text="$ whoami"
+                text="About me"
                 image={ face1 }
                 route="about"
               />
@@ -77,7 +77,7 @@ export default class Navbar extends Component {
                 route={ "blog" }
               /> */}
               <NavFace
-                text="check out mah stats bruh 🧠"
+                text="My resume"
                 image={ face1 }
                 route="resume"
               />
@@ -90,8 +90,5 @@ export default class Navbar extends Component {
   }
 
 }
-
-// fade out
-    // page itself ???
 
 // move heads when menu open
