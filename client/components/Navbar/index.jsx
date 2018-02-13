@@ -77,7 +77,7 @@ export default class Navbar extends Component {
                 route={ "blog" }
               /> */}
               <NavFace
-                text="My resume"
+                text="My résumé"
                 image={ face1 }
                 route="resume"
               />
@@ -90,3 +90,5 @@ export default class Navbar extends Component {
   }
 
 }
+
+// menu picture shows on transition

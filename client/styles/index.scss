@@ -134,6 +134,7 @@ header { // navbar
 }
 
 .speech-bubble { // navbar
+  font-family: 'Courgette', cursive;
   display: none;
   position: absolute;
   min-width: 8em;
@@ -212,7 +213,7 @@ header { // navbar
   outline: none;
   cursor: pointer;
   user-select: none;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Courgette', cursive;
   font-size: 1em;
   z-index: 0;
 }
@@ -256,6 +257,7 @@ header { // navbar
 }
 
 .button-download { // resume
+  font-family: 'Courgette', cursive;
   text-decoration: none;
   color: #000;
   z-index: 0;
@@ -318,6 +320,7 @@ header { // navbar
 .fade-out-menu {
   animation: fade-out-menu 1s ease-out;
   animation-fill-mode: forwards;
+  display: none;
   padding: 0;
   margin: 0;
 }
@@ -361,7 +364,7 @@ header { // navbar
 }
 
 .face-slide { // navbar
-  position: relative;
+  position: static;
 }
 
 .visible > div { // navbar
@@ -370,11 +373,49 @@ header { // navbar
 }
 
 .invisible > div { // navbar
-  animation: face-slide-out 1.2s ease-out;
+  animation: face-slide-out 1.2s ease-in;
   animation-fill-mode: forwards;
 }
 
 .fade-out-menu > div { // navbar
-  animation: face-fade-out 1.2s ease-out;
+  animation: face-fade-out 1s ease-out;
   animation-fill-mode: forwards;
+}
+
+@keyframes fish-slide-in { // main
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes fish-slide-out { // main
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+
+@keyframes fish-fade-out { // navbar
+  0% { opacity: 1; display: auto; }
+  100% { opacity: 0; display: none; }
+}
+
+.fish { // navbar
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.visible > .fish { // navbar
+  animation: fish-slide-in 1.2s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.invisible > .fish { // navbar
+  animation: fish-slide-out 1.2s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.fade-out-menu > .fish { // navbar
+  animation: fish-fade-out 1s ease-out;
+  animation-fill-mode: forwards;
+  display: none;
 }
