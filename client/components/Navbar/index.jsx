@@ -6,20 +6,40 @@ import NavFace from './NavFace'
 import Menu from './Menu'
 import SocailLinks from './SocialLinks'
 
+import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
+import face1 from '../../assets/face1.png'
 
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      visible: false
+      visible: 'initial',
+      page: ''
     }
     this.handleClick = this.handleClick.bind(this)
+    this.handleLocationChange = this.handleLocationChange.bind(this)
+  }
+
+  componentDidMount() {
+    window.addEventListener('popstate', this.handleLocationChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('popstate', this.handleLocationChange)
   }
 
   handleClick(toggle) {
-    this.setState({ visible: !toggle })
+    typeof toggle === 'string'
+      ? this.setState({ visible: !!toggle })
+      : this.setState({ visible: !toggle })
+  }
+
+  handleLocationChange() {
+    if (this.state.page !== window.location.href) {
+      this.setState({ page: window.location.href, visible: 'fade-out-menu' })
+    }
   }
 
   render() {
@@ -28,24 +48,23 @@ export default class Navbar extends Component {
     return (
       <header>
         <NavFace
-          text={ "There's no place like home..." }
-          image={ "homeFace.ico" }
-          route={ "" }
+          text="There's no place like home..."
+          image={ homeFace }
+          route=""
           />
         <div>
           <NavFace
-            text={ "Menu?" }
+            text="Menu?"
             image={ waiter }
             handleClick={ this.handleClick }
             visible={ visible }
           />
           {
-            visible &&
-            <Menu visible={ visible }> {/* unnecessary? */}
+            <Menu visible={ visible }>
               <NavFace
-                text={ "$ whoami" }
-                image={ "favicon.ico" }
-                route={ "about" }
+                text="About me"
+                image={ face1 }
+                route="about"
               />
               {/* <NavFace
                 text={ "i made this stuff 🛠" }
@@ -58,9 +77,9 @@ export default class Navbar extends Component {
                 route={ "blog" }
               /> */}
               <NavFace
-                text={ "check out mah stats bruh 🧠" }
-                image={ "favicon.ico" }
-                route={ "resume" }
+                text="My resume"
+                image={ face1 }
+                route="resume"
               />
             </Menu>
           }
@@ -71,3 +90,5 @@ export default class Navbar extends Component {
   }
 
 }
+
+// move heads when menu open
