@@ -98,5 +98,4 @@ console.log('hit', visible)
 // clicking on home renders other nav options
 
 // speech bubble
-    // hover messed up
     // opacity
