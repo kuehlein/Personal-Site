@@ -90,5 +90,3 @@ export default class Navbar extends Component {
   }
 
 }
-
-// menu picture shows on transition

@@ -310,6 +310,9 @@ header { // navbar
 
 #menu { // navbar
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   top: 0;
   left: 3em;
   height: 100vh;
@@ -330,6 +333,11 @@ header { // navbar
   width: 0vw;
 }
 
+#menu.initial > .logo-container { // navbar
+  display: none;
+  width: 0vw;
+}
+
 .visible { // navbar
   animation: slide-in 1.2s ease-out;
   animation-fill-mode: forwards;
@@ -344,22 +352,18 @@ header { // navbar
   margin: 0;
 }
 
-.invisible > div {
-  // display: none;
-}
-
 @keyframes face-slide-in { // main
-  0% { transform: translate(0, 0); display: auto; }
-  100% { transform: translate(10em, 10em); }
+  0% { transform: translate(0, 0); display: auto; opacity: 0; }
+  100% { transform: translate(10em, 10em); opacity: 1; }
 }
 
 @keyframes face-slide-out { // main
-  0% { transform: translate(10em, 10em); display: auto; }
-  100% { transform: translate(0, 0); display: none; }
+  0% { transform: translate(10em, 10em); opacity: 1; }
+  100% { transform: translate(0, 0); display: none; opacity: 0; }
 }
 
 @keyframes face-fade-out { // navbar
-  0% { opacity: 0.8; display: auto; }
+  0% { opacity: 1; display: auto; }
   100% { opacity: 0; display: none; }
 }
 
