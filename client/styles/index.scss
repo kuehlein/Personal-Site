@@ -311,9 +311,12 @@ header { // navbar
   top: 0;
   left: 3em;
   height: 100vh;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
+}
+
+#menu > div {
+  opacity: 1;
 }
 
 .fade-out-menu {

@@ -96,6 +96,3 @@ console.log('hit', visible)
 // move heads when menu open
 
 // clicking on home renders other nav options
-
-// speech bubble
-    // opacity
