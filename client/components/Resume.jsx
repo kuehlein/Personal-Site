@@ -35,7 +35,7 @@ export default class Resume extends Component {
 
   render() {
     const { pageNumber, numPages } = this.state
-    document.title = "My Resume"
+    document.title = "My Résumé"
 
     return (
       <div>

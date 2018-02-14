@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  background: transparent;
   background: #000;
   font-family: 'Cutive Mono', monospace;
 }
@@ -52,7 +53,8 @@ header { // navbar
 
 #main-container { // main
   position: relative;
-  background-image: url('https://i.imgur.com/rw3LbXr.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
+  background-size: cover;
   overflow: scroll;
   display: flex;
   align-items: center;
@@ -103,6 +105,16 @@ header { // navbar
   margin: 0;
 }
 
+.visible > .logo-container {
+  height: 3em;
+}
+
+.logo-container > a {
+  margin: 0;
+  padding: 0;
+  height: 3em;
+}
+
 .logo { // navbar
   height: 3em;
   width: 3em;
@@ -131,9 +143,11 @@ header { // navbar
 .logo-container:hover .speech-bubble, .speech-bubble:after { // navbar
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .speech-bubble { // navbar
+  font-family: 'Courgette', cursive;
   display: none;
   position: absolute;
   min-width: 8em;
@@ -212,7 +226,7 @@ header { // navbar
   outline: none;
   cursor: pointer;
   user-select: none;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Courgette', cursive;
   font-size: 1em;
   z-index: 0;
 }
@@ -256,6 +270,7 @@ header { // navbar
 }
 
 .button-download { // resume
+  font-family: 'Courgette', cursive;
   text-decoration: none;
   color: #000;
   z-index: 0;
@@ -303,11 +318,15 @@ header { // navbar
 
 @keyframes fade-out-menu { // navbar
   0% { opacity: 0.8; display: auto; width: 100vw; }
-  100% { opacity: 0; display: none; width: 100vw; }
+  99% { width: 100vw; }
+  100% { display: none; opacity: 0; width: 0vw; }
 }
 
 #menu { // navbar
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   top: 0;
   left: 3em;
   height: 100vh;
@@ -316,13 +335,18 @@ header { // navbar
 }
 
 .fade-out-menu {
-  animation: fade-out-menu 1.5s ease-out;
+  animation: fade-out-menu 1s ease-out;
   animation-fill-mode: forwards;
   padding: 0;
   margin: 0;
 }
 
 .initial { // navbar
+  display: none;
+  width: 0vw;
+}
+
+#menu.initial > .logo-container { // navbar
   display: none;
   width: 0vw;
 }
@@ -341,46 +365,81 @@ header { // navbar
   margin: 0;
 }
 
-.invisible > div {
-  display: none;
-}
-
 @keyframes face-slide-in { // main
-  0% { transform: translate(0em, 0em); display: auto; }
-  100% { transform: translate(10em, 10em); }
+  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
+  100% { transform: translate(30vw, 36vh); opacity: 1; }
 }
 
 @keyframes face-slide-out { // main
-  0% { transform: translate(10em, 10em); display: auto; }
-  100% { transform: translate(0em, 0em); display: none; }
+  0% { transform: translate(30vw, 36vh); opacity: 1; }
+  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
 }
 
 @keyframes face-fade-out { // navbar
-  0% { opacity: 0.8; display: auto; }
-  100% { opacity: 0; display: none; }
+  0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
+  100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
 }
 
 .face-slide { // navbar
-
+  position: static;
 }
 
-#menu.slide-in > .face-slide { // navbar
+.visible > div { // navbar
   animation: face-slide-in 1.2s ease-out;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
 }
 
-#menu.slide-out > .face-slide { // navbar
-  animation: face-slide-out 1.2s ease-out;
+.invisible > div { // navbar
+  animation: face-slide-out 1.2s ease-in;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
 }
 
-#menu.face-fade-out > .face-slide { // navbar
-  animation: face-fade-out 1.2s ease-out;
+.fade-out-menu > div { // navbar
+  animation: face-fade-out 0.2s ease-out;
   animation-fill-mode: forwards;
-  position: fixed;
-  top: 20em;
+}
+
+@keyframes fish-slide-in { // main
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes fish-slide-out { // main
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+
+@keyframes fish-fade-out { // navbar
+  0% { opacity: 1; display: auto; }
+  100% { opacity: 0; display: none; }
+}
+
+.fish { // navbar
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.visible > .fish { // navbar
+  animation: fish-slide-in 1.2s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.invisible > .fish { // navbar
+  animation: fish-slide-out 1.2s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.fade-out-menu > .fish { // navbar
+  animation: fish-fade-out 1s ease-out;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+.you-are-here {
+  margin: 0;
+  padding: 0;
+  color: #9d1b1b;
 }

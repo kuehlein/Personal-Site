@@ -9,6 +9,7 @@ import SocailLinks from './SocialLinks'
 import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
 import face1 from '../../assets/face1.png'
+import glasses from '../../assets/glasses.png'
 
 
 export default class Navbar extends Component {
@@ -43,7 +44,7 @@ export default class Navbar extends Component {
   }
 
   render() {
-    const { visible } = this.state
+    const { visible, page } = this.state
 
     return (
       <header>
@@ -51,6 +52,7 @@ export default class Navbar extends Component {
           text="There's no place like home..."
           image={ homeFace }
           route=""
+          page={ page }
           />
         <div>
           <NavFace
@@ -63,7 +65,7 @@ export default class Navbar extends Component {
             <Menu visible={ visible }>
               <NavFace
                 text="About me"
-                image={ face1 }
+                image={ glasses }
                 route="about"
               />
               {/* <NavFace
@@ -77,10 +79,17 @@ export default class Navbar extends Component {
                 route={ "blog" }
               /> */}
               <NavFace
-                text="My resume"
+                text="My résumé"
                 image={ face1 }
                 route="resume"
               />
+              {/* v temporarily used for positioning */}
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              {/* ^ temporarily used for positioning */}
             </Menu>
           }
         </div>
@@ -91,4 +100,4 @@ export default class Navbar extends Component {
 
 }
 
-// move heads when menu open
+// fix timing on initial menu open
