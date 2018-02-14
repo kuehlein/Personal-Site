@@ -74,7 +74,7 @@ header { // navbar
 }
 
 .main-child { // main
-  margin: 2.5em 0 3.5em 9em;
+  margin: 3em 0em 0em 13em;
   width: 80vw;
   height: 85vh;
 }
@@ -84,7 +84,7 @@ header { // navbar
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  left: 7.2em;
+  left: 8.2em;
   z-index: -1;
 }
 
@@ -92,6 +92,7 @@ header { // navbar
   padding: 0;
   margin: 0;
   color: #eee;
+  font-size: 2.6em;
   text-shadow: 0.15em 0.15em 0.04em #000;
   cursor: default;
   user-select: none;
@@ -204,19 +205,20 @@ header { // navbar
 
 .text-container { // about
   padding: 2em;
-  width: 59.83em;
+  max-width: 59.83em;
   min-height: 40em;
-  margin: 0 0 3em 0;
+  margin: 0 0 5em 0;
   box-shadow: 0.7em 0.7em 1em #111;
   background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
   font-weight: 700;
+  font-size: 1.1em;
 }
 
 #top-button { // scrollbutton, about, resume
   display: none;
   position: fixed;
   bottom: 2em;
-  right: 2.7em;
+  right: 5.5em;
   background-color: #eee;
   color: black;
   text-align: center;
@@ -238,6 +240,7 @@ header { // navbar
 .resume-container { // resume
   display: flex;
   z-index: -1;
+  margin: 0 0 2.5em 0;
 }
 
 .resume-pdf { // resume
@@ -253,7 +256,7 @@ header { // navbar
   position: fixed;
   font-size: 1em;
   top: 2em;
-  right: 1.1em;
+  right: 4em;
   background-color: #eee;
   text-align: center;
   border-radius: 1em;
