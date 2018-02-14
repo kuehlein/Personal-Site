@@ -66,7 +66,6 @@ export default class Navbar extends Component {
                 text="About me"
                 image={ face1 }
                 route="about"
-                page={ page }
               />
               {/* <NavFace
                 text={ "i made this stuff 🛠" }
@@ -82,7 +81,6 @@ export default class Navbar extends Component {
                 text="My résumé"
                 image={ face1 }
                 route="resume"
-                page={ page }
               />
               <div></div>
               <div></div>
@@ -100,3 +98,4 @@ export default class Navbar extends Component {
 }
 
 // fix animation on fade out
+// fix timing on initial menu open

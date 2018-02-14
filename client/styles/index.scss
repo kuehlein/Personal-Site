@@ -103,6 +103,16 @@ header { // navbar
   margin: 0;
 }
 
+.visible > .logo-container {
+  height: 3em;
+}
+
+.logo-container > a {
+  margin: 0;
+  padding: 0;
+  height: 3em;
+}
+
 .logo { // navbar
   height: 3em;
   width: 3em;
