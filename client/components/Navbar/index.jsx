@@ -43,7 +43,7 @@ export default class Navbar extends Component {
   }
 
   render() {
-    const { visible } = this.state
+    const { visible, page } = this.state
 
     return (
       <header>
@@ -51,6 +51,7 @@ export default class Navbar extends Component {
           text="There's no place like home..."
           image={ homeFace }
           route=""
+          page={ page }
           />
         <div>
           <NavFace
@@ -65,6 +66,7 @@ export default class Navbar extends Component {
                 text="About me"
                 image={ face1 }
                 route="about"
+                page={ page }
               />
               {/* <NavFace
                 text={ "i made this stuff 🛠" }
@@ -80,7 +82,13 @@ export default class Navbar extends Component {
                 text="My résumé"
                 image={ face1 }
                 route="resume"
+                page={ page }
               />
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </Menu>
           }
         </div>
@@ -90,3 +98,5 @@ export default class Navbar extends Component {
   }
 
 }
+
+// fix animation on fade out

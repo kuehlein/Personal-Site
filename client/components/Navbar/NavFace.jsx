@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 
 
 export default function NavFace(props) {
-  const { route, image, handleClick, visible, text } = props
+  const { route, image, handleClick, visible, text, page } = props
+  const currentPage = `/${route}` === window.location.pathname
 
   return (
     <div className="logo-container">
@@ -22,6 +23,12 @@ export default function NavFace(props) {
     }
     <div className="speech-bubble image-shadow">
       { text }
+      {
+        currentPage &&
+        <div className="you-are-here">
+          { "You are here." }
+        </div>
+      }
     </div>
   </div>
   )

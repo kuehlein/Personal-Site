@@ -131,6 +131,7 @@ header { // navbar
 .logo-container:hover .speech-bubble, .speech-bubble:after { // navbar
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .speech-bubble { // navbar
@@ -304,8 +305,8 @@ header { // navbar
 }
 
 @keyframes fade-out-menu { // navbar
-  0% { opacity: 0.8; display: auto; width: 100vw; }
-  100% { opacity: 0; display: none; width: 100vw; }
+  0% { opacity: 0.8; display: auto; }
+  100% { display: none; opacity: 0; }
 }
 
 #menu { // navbar
@@ -323,7 +324,6 @@ header { // navbar
 .fade-out-menu {
   animation: fade-out-menu 1s ease-out;
   animation-fill-mode: forwards;
-  display: none;
   padding: 0;
   margin: 0;
 }
@@ -353,17 +353,17 @@ header { // navbar
 }
 
 @keyframes face-slide-in { // main
-  0% { transform: translate(0, 0); display: auto; opacity: 0; }
-  100% { transform: translate(10em, 10em); opacity: 1; }
+  0% { transform: translate(0, 36vh); display: auto; opacity: 0; }
+  100% { transform: translate(30vw, 36vh); opacity: 1; }
 }
 
 @keyframes face-slide-out { // main
-  0% { transform: translate(10em, 10em); opacity: 1; }
-  100% { transform: translate(0, 0); display: none; opacity: 0; }
+  0% { transform: translate(30vw, 36vh); opacity: 1; }
+  100% { transform: translate(0, 36vh); display: none; opacity: 0; }
 }
 
 @keyframes face-fade-out { // navbar
-  0% { opacity: 1; display: auto; }
+  0% { opacity: 1; display: auto; left: 30vw; top: 36vh; }
   100% { opacity: 0; display: none; }
 }
 
@@ -403,6 +403,7 @@ header { // navbar
 
 .fish { // navbar
   position: absolute;
+  display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -422,4 +423,10 @@ header { // navbar
   animation: fish-fade-out 1s ease-out;
   animation-fill-mode: forwards;
   display: none;
+}
+
+.you-are-here {
+  margin: 0;
+  padding: 0;
+  color: #9d1b1b;
 }
