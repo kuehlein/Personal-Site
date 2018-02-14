@@ -9,6 +9,7 @@ import SocailLinks from './SocialLinks'
 import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
 import face1 from '../../assets/face1.png'
+import glasses from '../../assets/glasses.png'
 
 
 export default class Navbar extends Component {
@@ -64,7 +65,7 @@ export default class Navbar extends Component {
             <Menu visible={ visible }>
               <NavFace
                 text="About me"
-                image={ face1 }
+                image={ glasses }
                 route="about"
               />
               {/* <NavFace
