@@ -82,11 +82,13 @@ export default class Navbar extends Component {
                 image={ face1 }
                 route="resume"
               />
+              {/* v temporarily used for positioning */}
               <div></div>
               <div></div>
               <div></div>
               <div></div>
               <div></div>
+              {/* ^ temporarily used for positioning */}
             </Menu>
           }
         </div>
@@ -97,5 +99,4 @@ export default class Navbar extends Component {
 
 }
 
-// fix animation on fade out
 // fix timing on initial menu open

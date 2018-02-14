@@ -19,7 +19,7 @@ export default function SocialLinks() {
         className="social-link"
       />
     </a>
-    <a href="mailto:kyleuehlein@gmail.com?Subject=I love your website, you have great taste">
+    <a href="mailto:kyleuehlein@gmail.com?Subject=I love your website, you have great taste!">
       <img
         src={ email }
         alt="email"

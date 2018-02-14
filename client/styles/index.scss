@@ -315,8 +315,9 @@ header { // navbar
 }
 
 @keyframes fade-out-menu { // navbar
-  0% { opacity: 0.8; display: auto; }
-  100% { display: none; opacity: 0; }
+  0% { opacity: 0.8; display: auto; width: 100vw; }
+  99% { width: 100vw; }
+  100% { display: none; opacity: 0; width: 0vw; }
 }
 
 #menu { // navbar
@@ -363,18 +364,18 @@ header { // navbar
 }
 
 @keyframes face-slide-in { // main
-  0% { transform: translate(0, 36vh); display: auto; opacity: 0; }
+  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
   100% { transform: translate(30vw, 36vh); opacity: 1; }
 }
 
 @keyframes face-slide-out { // main
   0% { transform: translate(30vw, 36vh); opacity: 1; }
-  100% { transform: translate(0, 36vh); display: none; opacity: 0; }
+  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
 }
 
 @keyframes face-fade-out { // navbar
-  0% { opacity: 1; display: auto; left: 30vw; top: 36vh; }
-  100% { opacity: 0; display: none; }
+  0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
+  100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
 }
 
 .face-slide { // navbar
@@ -392,7 +393,7 @@ header { // navbar
 }
 
 .fade-out-menu > div { // navbar
-  animation: face-fade-out 1s ease-out;
+  animation: face-fade-out 0.2s ease-out;
   animation-fill-mode: forwards;
 }
 
