@@ -20398,7 +20398,7 @@ var _util = __webpack_require__(3);
 
 var _pdf_manager = __webpack_require__(457);
 
-var _is_node = __webpack_require__(80);
+var _is_node = __webpack_require__(81);
 
 var _is_node2 = _interopRequireDefault(_is_node);
 

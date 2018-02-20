@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ScrollButton from './ScrollButton'
-import { Document, Page, setOptions } from 'react-pdf/build/entry.noworker'
+import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
 
 import resume from '../assets/resume.pdf'
 
