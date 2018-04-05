@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ScrollButton from './ScrollButton'
-import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
+import { Document, Page, setOptions } from 'react-pdf/dist/entry.webpack'
 
 import resume from '../assets/resume.pdf'
 
@@ -64,6 +64,3 @@ export default class Resume extends Component {
   }
 
 }
-
-
-// fade out ???

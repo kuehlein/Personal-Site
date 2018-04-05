@@ -23,9 +23,10 @@
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-pdf": "^2.5.3",
+    "react-pdf": "^3.0.4",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "svg-loader": "^0.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
