@@ -42,15 +42,18 @@ module.exports = {
           }
         ]
       }, {
-        test: /\.(svg)$/,
-        use: [
-          {
-            loader: 'svg-loader',
-            options: {
-              mimetype: 'image/svg'
-            }
-          }
-        ]
+        // loader: 'file-loader'
+      }, {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: 'svg-react-loader',
+        query: {
+          // classIdPrefix: '[name]-[hash:8]__',
+          propsMap: {
+              fillRule: 'fill-rule'
+          },
+          xmlnsTest: /^xmlns.*$/
+        }
       }
     ]
   },
@@ -62,6 +65,6 @@ module.exports = {
     ])
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.png', '.pdf', '*']
+    extensions: ['.js', '.jsx', '.png', '.pdf', '.svg', '*']
   }
 }
