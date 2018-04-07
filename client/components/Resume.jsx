@@ -64,6 +64,3 @@ export default class Resume extends Component {
   }
 
 }
-
-
-// fade out ???
