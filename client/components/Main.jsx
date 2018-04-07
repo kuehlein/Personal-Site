@@ -28,5 +28,3 @@ export default function Main(props) {
     </div>
   )
 }
-
-// add transitions to pages

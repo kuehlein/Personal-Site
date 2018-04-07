@@ -23,7 +23,7 @@
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-pdf": "^2.5.3",
+    "react-pdf": "^3.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1"
   },
@@ -35,8 +35,6 @@
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.9",
-    "file-loader": "^1.1.6",
-    "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.1",
     "sass-loader": "^6.0.6",

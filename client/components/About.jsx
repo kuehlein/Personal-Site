@@ -59,5 +59,3 @@ export default class About extends Component {
   }
 
 }
-
-// indent text
