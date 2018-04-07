@@ -5,7 +5,6 @@ import ScrollButton from './ScrollButton'
 import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
 
 import resume from '../assets/resume.pdf'
-import gourd from '../assets/gourdspinner.svg'
 
 
 setOptions({
@@ -65,6 +64,3 @@ export default class Resume extends Component {
   }
 
 }
-
-
-// why is there extra space at bottom of resume
