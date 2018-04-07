@@ -42,18 +42,9 @@ module.exports = {
           }
         ]
       }, {
-        // loader: 'file-loader'
-      }, {
         test: /\.svg$/,
-        exclude: /node_modules/,
-        loader: 'svg-react-loader',
-        query: {
-          // classIdPrefix: '[name]-[hash:8]__',
-          propsMap: {
-              fillRule: 'fill-rule'
-          },
-          xmlnsTest: /^xmlns.*$/
-        }
+        loader: require.resolve('./scripts/dangerouslySetInnerHTML.loader'),
+        exclude: /node_modules/
       }
     ]
   },

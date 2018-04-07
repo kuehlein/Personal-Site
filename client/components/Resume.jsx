@@ -5,9 +5,8 @@ import ScrollButton from './ScrollButton'
 import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
 
 import resume from '../assets/resume.pdf'
+import gourd from '../assets/gourdspinner.svg'
 
-import fish from '../assets/francisco-goya-fish.svg'
-// Fish = fish.replace('\ufeff', '')
 
 setOptions({
   cMapUrl: 'cmaps/',
@@ -61,12 +60,6 @@ export default class Resume extends Component {
           </a>
         </div>
         <ScrollButton />
-        <img src={ fish } />
-        {/* <div dangerouslySetInnerHTML={{__html: fish}} /> */}
-        {/* <svg>
-          <image href={ fish }/>
-        </svg> */}
-        <fish />
       </div>
     )
   }
