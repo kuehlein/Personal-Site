@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { Main, Home, About, Projects, Blog, Resume } from './components'
 
-import gourdSpinner from './assets/gourdspinner.png'
+import gourdSpinner from './assets/gourdspinner.svg'
 
 
 export default class AppRoutes extends Component {
@@ -28,7 +28,9 @@ export default class AppRoutes extends Component {
         {
           this.state.loading
             ? <div className="spinner-container">
-                <img src={ gourdSpinner } className="gourd-spinner" />
+                <div className="gourd-spinner">
+                  { gourdSpinner }
+                </div>
               </div>
             : <Main>
                 <Switch>

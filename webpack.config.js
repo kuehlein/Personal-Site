@@ -41,6 +41,10 @@ module.exports = {
             }
           }
         ]
+      }, {
+        test: /\.svg$/,
+        loader: require.resolve('./scripts/dangerouslySetInnerHTML.loader'),
+        exclude: /node_modules/
       }
     ]
   },
@@ -52,6 +56,6 @@ module.exports = {
     ])
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.png', '.pdf', '*']
+    extensions: ['.js', '.jsx', '.png', '.pdf', '.svg', '*']
   }
 }
