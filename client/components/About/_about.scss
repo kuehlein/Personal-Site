@@ -1,10 +1,57 @@
-.text-container { // about
-  padding: 2em;
-  max-width: 59.83em;
-  min-height: 40em;
-  margin: 0 0 5em 0;
-  box-shadow: 0.7em 0.7em 1em #111;
-  background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
-  font-weight: 700;
-  font-size: 1.1em;
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+  }
+
+  /* iPads (landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    /* Styles */
+  }
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .text-container { // about
+    padding: 2em;
+    max-width: 59.83em;
+    min-height: 40em;
+    margin: 0 0 5em 0;
+    box-shadow: 0.7em 0.7em 1em #111;
+    background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  // .text-container { // about
+  //   padding: 2em;
+  //   max-width: 59.83em;
+  //   min-height: 40em;
+  //   margin: 0 0 5em 0;
+  //   box-shadow: 0.7em 0.7em 1em #111;
+  //   background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
+  //   font-weight: 700;
+  //   font-size: 1.1em;
+  // }
 }
