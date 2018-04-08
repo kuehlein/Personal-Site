@@ -1,0 +1,88 @@
+#main-container {
+  position: relative;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
+  background-size: cover;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  animation: fade-in 0.5s linear;
+  z-index: 0;
+}
+
+.fade-in {
+  animation: fade-in 0.5s linear;
+}
+
+.fade-out {
+  animation: fade-out 0.5s linear;
+}
+
+.main-child {
+  margin: 3em 0em 0em 15.5em;
+  width: 80vw;
+  height: 85vh;
+}
+
+.name-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  left: 9.4em;
+  z-index: -1;
+}
+
+.name-position {
+  padding: 0;
+  margin: 0;
+  color: #eee;
+  font-size: 2.6em;
+  text-shadow: 0.15em 0.15em 0.04em #000;
+  cursor: default;
+  user-select: none;
+  z-index: -1;
+}
+
+.spinner-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gourd-spinner {
+  width: 10em;
+  height: 10em;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slide-in {
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes slide-out {
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+
+@keyframes fish-slide-in {
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes fish-slide-out {
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+
+

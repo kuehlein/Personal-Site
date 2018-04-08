@@ -1,10 +1,12 @@
 'use strict'
 
 import React, { Component } from 'react'
-import ScrollButton from './ScrollButton'
 import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
+import ScrollButton from '../ScrollButton'
 
-import resume from '../assets/resume.pdf'
+import './_resume.scss'
+
+import resume from '../../assets/resume.pdf'
 
 
 setOptions({

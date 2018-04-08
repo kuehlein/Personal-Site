@@ -6,6 +6,8 @@ import NavFace from './NavFace'
 import Menu from './Menu'
 import SocailLinks from './SocialLinks'
 
+import './_navbar.scss'
+
 import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
 import face1 from '../../assets/face1.png'

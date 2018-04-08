@@ -1,7 +1,9 @@
 'use strict'
 
 import React, { Component } from 'react'
-import me from '../assets/self1.png'
+import me from '../../assets/self1.png'
+
+import './_home.scss'
 
 
 export default class Home extends Component {
