@@ -1,31 +1,115 @@
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+  }
+
+  /* iPads (landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    /* Styles */
+  }
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .resume-container {
+    display: flex;
+    z-index: -1;
+    margin: 0 0 2.5em 0;
+  }
+
+  .resume-pdf {
+    width: 59.83em;
+    height: 84.7em;
+    margin: 0 0 3em 0;
+    box-shadow: 0.7em 0.7em 1em #111;
+    z-index: -1;
+  }
+
+  .button-container {
+    position: fixed;
+    font-size: 1em;
+    top: 2em;
+    right: 3.5em;
+    text-align: center;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 0.7em 0.7em 1em #111;
+    cursor: pointer;
+  }
+
+  .button-download {
+    z-index: 0;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  // .resume-container {
+  //   display: flex;
+  //   z-index: -1;
+  //   margin: 0 0 2.5em 0;
+  // }
+
+  // .resume-pdf {
+  //   width: 59.83em;
+  //   height: 84.7em;
+  //   margin: 0 0 3em 0;
+  //   box-shadow: 0.7em 0.7em 1em #111;
+  //   z-index: -1;
+  // }
+
+  // .button-container {
+  //   position: fixed;
+  //   font-size: 1em;
+  //   top: 2em;
+  //   right: 3.5em;
+  //   text-align: center;
+  //   border-radius: 1em;
+  //   padding: 1em;
+  //   box-shadow: 0.7em 0.7em 1em #111;
+  //   cursor: pointer;
+  // }
+
+  // .button-download {
+  //   z-index: 0;
+  // }
+}
+
+/* Screen size neutral ----------- */
 .resume-container {
-  display: flex;
-  z-index: -1;
-  margin: 0 0 2.5em 0;
+  // z-index: -1;
 }
 
 .resume-pdf {
-  width: 59.83em;
-  height: 84.7em;
-  margin: 0 0 3em 0;
-  box-shadow: 0.7em 0.7em 1em #111;
-  z-index: -1;
+  // z-index: -1;
 }
 
 .button-container {
   font-family: 'Cutive Mono', monospace;
-  position: fixed;
-  font-size: 1em;
-  top: 2em;
-  right: 3.5em;
+  // position: fixed;
   background-color: #eee;
   text-align: center;
-  border-radius: 1em;
-  padding: 1em;
   border: none;
   outline: none;
-  box-shadow: 0.7em 0.7em 1em #111;
-  cursor: pointer;
   user-select: none;
 }
 
@@ -37,5 +121,5 @@
   font-family: 'Courgette', cursive;
   text-decoration: none;
   color: #000;
-  z-index: 0;
+  // z-index: 0;
 }
