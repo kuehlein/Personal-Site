@@ -163,6 +163,16 @@ header {
   margin: 0;
 }
 
+@keyframes face-slide-in {
+  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
+  100% { transform: translate(30vw, 36vh); opacity: 1; }
+}
+
+@keyframes face-slide-out {
+  0% { transform: translate(30vw, 36vh); opacity: 1; }
+  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
+}
+
 @keyframes face-fade-out {
   0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
   100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
