@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import fish from '../../../assets/francisco-goya-fish.png'
+import fish from '../../assets/francisco-goya-fish.png'
 
 
 export default function Menu(props) {

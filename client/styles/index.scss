@@ -1,3 +1,6 @@
+@import '../components/Navbar/navbar';
+
+
 html {
   box-sizing: border-box;
   overflow: hidden;
@@ -13,33 +16,6 @@ body {
   background: #000;
   font-family: 'Cutive Mono', monospace;
 }
-
-header { // navbar
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  background-color: #000;
-  top: 0;
-  left: 0;
-  width: 4em;
-  height: 100%;
-  z-index: 1;
-}
-
-// make site for mobile, then @media for desktop
-
-// @media only screen and (max-width: 1023px) {
-//   header {
-//     position: fixed;
-//     display: block;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 3em;
-//     background-color: #000;
-//   }
-// }
 
 @keyframes fade-in { // main, home, resume, about
   0% { opacity: 0; }
@@ -97,84 +73,6 @@ header { // navbar
   cursor: default;
   user-select: none;
   z-index: -1;
-}
-
-.logo-container { // navbar
-  display: flex;
-  max-width: 4em;
-  padding: 0;
-  margin: 0;
-}
-
-.visible > .logo-container {
-  height: 4em;
-}
-
-.logo-container > a {
-  margin: 0;
-  padding: 0;
-  height: 4em;
-}
-
-.logo { // navbar
-  height: 4em;
-  width: 4em;
-  user-select: none;
-}
-
-.menu-toggle { // navbar
-  height: 25em;
-  margin: 0 0 0 -2em;
-  transition: margin ease 0.5s;
-  user-select: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.menu-toggle:hover { // navbar
-  margin-left: 0em;
-}
-
-.menu-toggle:hover ~ .speech-bubble, .speech-bubble:after { // navbar
-  margin: 3.2em 0 0 6.5em;
-  display: flex;
-  justify-content: center;
-}
-
-.logo-container:hover .speech-bubble, .speech-bubble:after { // navbar
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.speech-bubble { // navbar
-  font-family: 'Courgette', cursive;
-  display: none;
-  position: absolute;
-  min-width: 8em;
-  background-color: #eee;
-  color: black;
-  text-align: center;
-  border-radius: 1em;
-  padding: 0.5em;
-  margin: 3.2em 0 0 4.5em;
-  cursor: default;
-  user-select: none;
-  z-index: 1;
-}
-
-.speech-bubble:after { // navbar
-  content: '';
-  display: block; /* reduce the damage in FF3.0 */
-  position: absolute;
-  top: 0;
-  left: -0.5em;
-  width: 0;
-  margin: 0 0 0 0;
-  border-width: 0.5em 1em 0;
-  border-style: solid;
-  border-color: #eee transparent;
-  z-index: 1;
 }
 
 .text-over-picture { // home
@@ -279,18 +177,7 @@ header { // navbar
   z-index: 0;
 }
 
-.social-link-container { // navbar
-  padding: 0.3em;
-}
-
-.social-link { // navbar
-  height: 2.3em;
-  width: 2.3em;
-  margin: 0 0 0 0.6em;
-  user-select: none;
-}
-
-.spinner-container {
+.spinner-container { // main
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -319,89 +206,6 @@ header { // navbar
   100% { width: 0vw; display: none; }
 }
 
-@keyframes fade-out-menu { // navbar
-  0% { opacity: 0.8; display: auto; width: 100vw; }
-  99% { width: 100vw; }
-  100% { display: none; opacity: 0; width: 0vw; }
-}
-
-#menu { // navbar
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  top: 0;
-  left: 4em;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: -1;
-}
-
-.fade-out-menu {
-  animation: fade-out-menu 1s ease-out;
-  animation-fill-mode: forwards;
-  padding: 0;
-  margin: 0;
-}
-
-.initial { // navbar
-  display: none;
-  width: 0vw;
-}
-
-#menu.initial > .logo-container { // navbar
-  display: none;
-  width: 0vw;
-}
-
-.visible { // navbar
-  animation: slide-in 1.2s ease-out;
-  animation-fill-mode: forwards;
-  padding: 0;
-  margin: 0;
-}
-
-.invisible { // navbar
-  animation: slide-out 1.2s ease-in;
-  animation-fill-mode: forwards;
-  padding: 0;
-  margin: 0;
-}
-
-@keyframes face-slide-in { // main
-  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
-  100% { transform: translate(30vw, 36vh); opacity: 1; }
-}
-
-@keyframes face-slide-out { // main
-  0% { transform: translate(30vw, 36vh); opacity: 1; }
-  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
-}
-
-@keyframes face-fade-out { // navbar
-  0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
-  100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
-}
-
-.face-slide { // navbar
-  position: static;
-}
-
-.visible > div { // navbar
-  animation: face-slide-in 1.2s ease-out;
-  animation-fill-mode: forwards;
-}
-
-.invisible > div { // navbar
-  animation: face-slide-out 1.2s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.fade-out-menu > div { // navbar
-  animation: face-fade-out 0.2s ease-out;
-  animation-fill-mode: forwards;
-}
-
 @keyframes fish-slide-in { // main
   0% { width: 0vw; display: auto; }
   100% { width: 100vw; }
@@ -410,39 +214,4 @@ header { // navbar
 @keyframes fish-slide-out { // main
   0% { width: 100vw; display: auto; }
   100% { width: 0vw; display: none; }
-}
-
-@keyframes fish-fade-out { // navbar
-  0% { opacity: 1; display: auto; }
-  100% { opacity: 0; display: none; }
-}
-
-.fish { // navbar
-  position: absolute;
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.visible > .fish { // navbar
-  animation: fish-slide-in 1.2s ease-out;
-  animation-fill-mode: forwards;
-}
-
-.invisible > .fish { // navbar
-  animation: fish-slide-out 1.2s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.fade-out-menu > .fish { // navbar
-  animation: fish-fade-out 1s ease-out;
-  animation-fill-mode: forwards;
-  display: none;
-}
-
-.you-are-here {
-  margin: 0;
-  padding: 0;
-  color: #9d1b1b;
 }
