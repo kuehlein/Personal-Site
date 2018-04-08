@@ -48,56 +48,109 @@ export default class Navbar extends Component {
   render() {
     const { visible, page } = this.state
 
-    return (
-      <header>
-        <NavFace
-          text="There's no place like home..."
-          image={ homeFace }
-          route=""
-          page={ page }
-          />
-        <div>
+    return screen.width > 321
+      ? (
+        <header>
           <NavFace
-            text="Menu?"
-            image={ waiter }
-            handleClick={ this.handleClick }
-            visible={ visible }
-          />
-          {
-            <Menu visible={ visible }>
-              <NavFace
-                text="About me"
-                image={ glasses }
-                route="about"
-              />
-              {/* <NavFace
-                text={ "i made this stuff 🛠" }
-                image={ "favicon.ico" }
-                route={ "projects" }
-              />
-              <NavFace
-                text={ "musings on software 📝" }
-                image={ "favicon.ico" }
-                route={ "blog" }
-              /> */}
-              <NavFace
-                text="My résumé"
-                image={ face1 }
-                route="resume"
-              />
-              {/* v temporarily used for positioning */}
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              {/* ^ temporarily used for positioning */}
-            </Menu>
-          }
-        </div>
-        <SocailLinks />
-      </header>
-    )
+            text="There's no place like home..."
+            image={ homeFace }
+            route=""
+            page={ page }
+            />
+          <div>
+            <NavFace
+              text="Menu?"
+              image={ waiter }
+              handleClick={ this.handleClick }
+              visible={ visible }
+            />
+            {
+              <Menu visible={ visible }>
+                <NavFace
+                  text="About me"
+                  image={ glasses }
+                  route="about"
+                />
+                {/* <NavFace
+                  text={ "i made this stuff 🛠" }
+                  image={ "favicon.ico" }
+                  route={ "projects" }
+                />
+                <NavFace
+                  text={ "musings on software 📝" }
+                  image={ "favicon.ico" }
+                  route={ "blog" }
+                /> */}
+                <NavFace
+                  text="My résumé"
+                  image={ face1 }
+                  route="resume"
+                />
+                {/* v temporarily used for positioning */}
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                {/* ^ temporarily used for positioning */}
+              </Menu>
+            }
+          </div>
+          <SocailLinks />
+        </header>
+        )
+      : (
+        <header>
+          <div className="mobile-nav">
+            <NavFace
+              text="There's no place like home..."
+              image={ homeFace }
+              route=""
+              page={ page }
+            />
+            <SocailLinks />
+          </div>
+          <div>
+            <NavFace
+              text="Menu?"
+              image={ waiter }
+              handleClick={ this.handleClick }
+              visible={ visible }
+            />
+            {
+              <Menu visible={ visible }>
+                <NavFace
+                  text="About me"
+                  image={ glasses }
+                  route="about"
+                />
+                {/* <NavFace
+                  text={ "i made this stuff 🛠" }
+                  image={ "favicon.ico" }
+                  route={ "projects" }
+                />
+                <NavFace
+                  text={ "musings on software 📝" }
+                  image={ "favicon.ico" }
+                  route={ "blog" }
+                /> */}
+                <NavFace
+                  text="My résumé"
+                  image={ face1 }
+                  route="resume"
+                />
+                {/* v temporarily used for positioning */}
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                {/* ^ temporarily used for  positioning */}
+              </Menu>
+            }
+          </div>
+        </header>
+      )
   }
 
 }

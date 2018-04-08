@@ -1,7 +1,31 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
-  /* Styles */
+  .name-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 1em;
+    bottom: 2em;
+    // z-index: -1;
+  }
+
+  .name-position {
+    font-size: 2.6em;
+    text-shadow: 0.15em 0.15em 0.04em #000;
+    // z-index: -1;
+  }
+
+  .gourd-spinner {
+    width: 6em;
+    height: 6em;
+  }
+
+  .gourd-spinner svg {
+    width: 12em;
+    height: 12em;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
