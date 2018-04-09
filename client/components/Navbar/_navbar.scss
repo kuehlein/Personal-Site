@@ -18,38 +18,40 @@ and (max-width : 320px) {
 
   .logo-container {
     display: flex;
-    max-width: 3.25em;
-    margin-left: 0.3em;
+    max-width: 3em;
   }
 
   .visible > .logo-container {
-    height: 3.25em;
+    height: 3em;
   }
 
   .logo-container > a {
-    height: 3.25em;
+    height: 3em;
   }
 
   .logo {
-    height: 3.25em;
-    width: 3.25em;
+    height: 3em;
+    width: 3em;
+  }
+
+  .logo.face-slide {
+    margin-left: 0.3em;
   }
 
   .menu-toggle {
-    position: absolute;
-    bottom: 0;
-    // margin-top: 22em;
+    position: fixed;
+    bottom: -13em;
     height: 28em;
     transform: rotate(90deg);
-    //transition: margin ease 0.5s;
-    z-index: 0;
+    // transition: margin ease 0.5s;
+    z-index: 1;
   }
 
-  .menu-toggle:hover ~ .speech-bubble, .speech-bubble:after {
-    margin: 3.2em 0 0 6.5em;
-    display: flex;
-    justify-content: center;
-  }
+  // .menu-toggle:hover ~ .speech-bubble, .speech-bubble:after {
+  //   margin: 3.2em 0 0 6.5em;
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
   .speech-bubble {
     font-family: 'Courgette', cursive;

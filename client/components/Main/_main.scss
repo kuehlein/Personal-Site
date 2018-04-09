@@ -8,13 +8,13 @@ and (max-width : 320px) {
     justify-content: flex-start;
     right: 1em;
     bottom: 2em;
-    // z-index: -1;
+    z-index: 0;
   }
 
   .name-position {
     font-size: 2.6em;
     text-shadow: 0.15em 0.15em 0.04em #000;
-    // z-index: -1;
+    z-index: 0;
   }
 
   .gourd-spinner {

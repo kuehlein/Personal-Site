@@ -4,8 +4,23 @@ and (max-width : 320px) {
   .position-main { // home, about
     position: absolute;
     bottom: 0;
-    // z-index: -1;
+    z-index: 0;
   }
+
+  #top-button { // scrollbutton, about, resume
+    display: none;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+    z-index: 0;
+  }
+
+  .image-shadow { // navbar, about
+    box-shadow: 0.7em 0.7em 1em #111;
+  } // remove from home
 }
 
 /* Smartphones (landscape) ----------- */
