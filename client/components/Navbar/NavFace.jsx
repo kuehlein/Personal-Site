@@ -18,7 +18,7 @@ export default function NavFace(props) {
             </Link>
           : <img
               src={ `${image}` }
-              onClick={ !mobile ? (() => handleClick(visible)) : undefined }
+              onClick={ () => handleClick(visible) }
               className={`menu-toggle ${mobile && visible}`}
             />
       }

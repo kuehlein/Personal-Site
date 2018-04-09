@@ -155,5 +155,3 @@ export default class Navbar extends Component {
   }
 
 }
-
-// fix timing on initial menu open
