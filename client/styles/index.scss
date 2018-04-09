@@ -154,3 +154,23 @@ body {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+@keyframes slide-in {
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes slide-out {
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+
+@keyframes slide-up { // portrait
+  0% { height: 0vh; display: auto; }
+  100% { height: 100vh; }
+}
+
+@keyframes slide-down { // portrait
+  0% { height: 100vh; display: auto; }
+  100% { height: 0vh; display: none; }
+}

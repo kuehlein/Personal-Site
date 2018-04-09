@@ -3,9 +3,6 @@
 and (max-width : 320px) {
   #main-container {
     position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     z-index: 0;
   }
 
@@ -185,16 +182,6 @@ and (min-width : 1824px) {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-@keyframes slide-in {
-  0% { width: 0vw; display: auto; }
-  100% { width: 100vw; }
-}
-
-@keyframes slide-out {
-  0% { width: 100vw; display: auto; }
-  100% { width: 0vw; display: none; }
 }
 
 @keyframes fish-slide-in {
