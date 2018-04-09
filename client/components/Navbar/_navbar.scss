@@ -41,6 +41,7 @@ and (max-width : 320px) {
   .menu-toggle {
     position: fixed;
     bottom: -32em;
+    margin-left: 2em;
     height: 100vh;
     // transition: margin ease 0.5s;
     z-index: 1;

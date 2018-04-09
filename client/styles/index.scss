@@ -4,7 +4,7 @@ and (max-width : 320px) {
   .position-main { // home, about
     position: absolute;
     bottom: 0;
-    z-index: 0;
+    z-index: -1;
   }
 
   #top-button { // scrollbutton, about, resume
