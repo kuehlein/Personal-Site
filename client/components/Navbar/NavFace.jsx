@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 export default function NavFace(props) {
   const { route, image, handleClick, visible, text, page } = props
   const currentPage = `/${route}` === window.location.pathname
+  const mobile = screen.width < 321
 
   return (
     <div className="logo-container">
@@ -17,8 +18,8 @@ export default function NavFace(props) {
             </Link>
           : <img
               src={ `${image}` }
-              onClick={ () => handleClick(visible) }
-              className="menu-toggle"
+              onClick={ !mobile ? (() => handleClick(visible)) : undefined }
+              className={`menu-toggle ${mobile && visible}`}
             />
       }
       <div className="speech-bubble image-shadow">

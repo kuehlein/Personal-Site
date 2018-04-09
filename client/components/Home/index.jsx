@@ -34,7 +34,7 @@ export default class Home extends Component {
           <h3>Writer, musician,</h3>
           <h3>interesting individual,</h3>
           <h3>but in a good way.</h3>
-          <h5>(and developer of course)</h5>
+          <h5>(and software engineer extraordinaire)</h5>
         </div>
       </div>
     )

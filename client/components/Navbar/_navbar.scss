@@ -42,8 +42,9 @@ and (max-width : 320px) {
     position: fixed;
     bottom: -32em;
     margin-left: 2em;
-    height: 100vh;
-    // transition: margin ease 0.5s;
+    width: 100%;
+    height: 100%;
+    transition: margin ease 0.5s;
     z-index: 1;
   }
 
@@ -90,10 +91,16 @@ and (max-width : 320px) {
 
   .visible {
     animation: slide-up 1.2s ease-out;
+    animation: fish-slide-up 1.2s ease-out;
   }
 
   .invisible {
     animation: slide-down 1.2s ease-in;
+    animation: fish-slide-down 1.2s ease-in;
+  }
+
+  .initial {
+    //
   }
 
 //////
@@ -101,35 +108,35 @@ and (max-width : 320px) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    top: 0;
-    left: 4em;
+    bottom: 0;
+    // left: 4em;
     height: 100vh;
-    z-index: -1;
+    // z-index: -1;
   }
 
-  .fish {
-    position: absolute;
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+  // .fish {
+  //   position: absolute;
+  //   display: block;
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 
-  .visible > .fish {
-    animation: fish-slide-in 1.2s ease-out;
-    animation-fill-mode: forwards;
-  }
+  // .visible > .fish {
+  //   animation: fish-slide-in 1.2s ease-out;
+  //   animation-fill-mode: forwards;
+  // }
 
-  .invisible > .fish {
-    animation: fish-slide-out 1.2s ease-in;
-    animation-fill-mode: forwards;
-  }
+  // .invisible > .fish {
+  //   animation: fish-slide-out 1.2s ease-in;
+  //   animation-fill-mode: forwards;
+  // }
 
-  .fade-out-menu > .fish {
-    animation: fish-fade-out 1s ease-out;
-    animation-fill-mode: forwards;
-    display: none;
-  }
+  // .fade-out-menu > .fish {
+  //   animation: fish-fade-out 1s ease-out;
+  //   animation-fill-mode: forwards;
+  //   display: none;
+  // }
 ///////////
 }
 
@@ -200,7 +207,7 @@ and (min-width : 1264px) {
   .menu-toggle {
     height: 25em;
     margin: 0 0 0 -2em;
-    //transition: margin ease 0.5s;
+    // transition: margin ease 0.5s;
     cursor: pointer;
     z-index: 2;
   }
@@ -265,6 +272,11 @@ and (min-width : 1264px) {
     left: 4em;
     height: 100vh;
     z-index: -1;
+  }
+
+  .initial {
+    display: none;
+    width: 0vw;
   }
 
   .fish {
@@ -405,6 +417,11 @@ and (min-width : 1824px) {
   //   z-index: -1;
   // }
 
+  // .initial {
+  //   display: none;
+  //   width: 0vw;
+  // }
+
   // .fish {
   //   position: absolute;
   //   display: block;
@@ -484,11 +501,6 @@ and (min-width : 1824px) {
   // z-index: -1;
 }
 
-.initial {
-  display: none;
-  width: 0vw;
-}
-
 #menu.initial > .logo-container {
   display: none;
   width: 0vw;
@@ -531,29 +543,39 @@ and (min-width : 1824px) {
   color: #9d1b1b;
 }
 
-// /* Animations ----------- */
-// @keyframes fade-out-menu {
-//   0% { opacity: 0.8; display: auto; width: 100vw; }
-//   99% { width: 100vw; }
-//   100% { display: none; opacity: 0; width: 0vw; }
-// }
+/* Animations ----------- */
+@keyframes fade-out-menu {
+  0% { opacity: 0.8; display: auto; width: 100vw; }
+  99% { width: 100vw; }
+  100% { display: none; opacity: 0; width: 0vw; }
+}
 
-// @keyframes face-slide-in {
-//   0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
-//   100% { transform: translate(30vw, 36vh); opacity: 1; }
-// }
+@keyframes face-slide-in {
+  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
+  100% { transform: translate(30vw, 36vh); opacity: 1; }
+}
 
-// @keyframes face-slide-out {
-//   0% { transform: translate(30vw, 36vh); opacity: 1; }
-//   100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
-// }
+@keyframes face-slide-out {
+  0% { transform: translate(30vw, 36vh); opacity: 1; }
+  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
+}
 
-// @keyframes face-fade-out {
-//   0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
-//   100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
-// }
+@keyframes face-fade-out {
+  0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
+  100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
+}
 
-// @keyframes fish-fade-out {
-//   0% { opacity: 1; display: auto; }
-//   100% { opacity: 0; display: none; }
-// }
+@keyframes fish-fade-out {
+  0% { opacity: 1; display: auto; }
+  100% { opacity: 0; display: none; }
+}
+
+@keyframes fish-slide-up {
+  0% { transform: translate(0, 10em); opacity: 1; }
+  100% { transform: translate(0, 40em); opacity: 0; }
+}
+
+@keyframes fish-slide-down {
+  0% { transform: translate(0, 30vh); }
+  100% { transform: translate(0, 0vh); }
+}
