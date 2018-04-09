@@ -15,7 +15,7 @@ and (max-width : 320px) {
     max-height: 53vh;
     margin: 0 1.5em 0 1.5em;
     box-shadow: 0.7em 0.7em 1em #111;
-    z-index: 0;
+    z-index: -1;
   }
 
   .button-container {
@@ -28,10 +28,7 @@ and (max-width : 320px) {
     padding: 0.8em;
     margin-left: 30vw;
     box-shadow: 0.7em 0.7em 1em #111;
-  }
-
-  .button-download {
-    z-index: 0;
+    z-index: -1;
   }
 }
 

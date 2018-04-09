@@ -90,12 +90,12 @@ and (max-width : 320px) {
   }
 
   .visible {
-    animation: slide-up 1.2s ease-out;
+    // animation: slide-up 1.2s ease-out;
     animation: fish-slide-down 1.2s ease-in;
   }
 
   .invisible {
-    animation: slide-down 1.2s ease-in;
+    // animation: slide-down 1.2s ease-in;
     animation: fish-slide-up 1.2s ease-out;
   }
 
@@ -570,12 +570,32 @@ and (min-width : 1824px) {
   100% { opacity: 0; display: none; }
 }
 
-@keyframes fish-slide-up {
-  0% { transform: translateY(-5vh); width: 100vw; left: 0; bottom: 0; }
-  100% { transform: translateY(90vh); width: 100vw; left: 0; top: 5em; }
+@keyframes fish-slide-up { // portrait
+  0% {
+        transform: translateY(0vh);
+        width: 100vw;
+        left: 0;
+        bottom: 0;
+      }
+  100% {
+        transform: translateY(87.1vh);
+        width: 100vw;
+        left: 0;
+        top: 5em;
+       }
 }
 
-@keyframes fish-slide-down {
-  0% { transform: translateY(90vh); width: 100vw; left: 0; top: 5em; }
-  100% { transform: translateY(-5vh); width: 100vw; left: 0; bottom: 0; }
+@keyframes fish-slide-down { // portrait
+  0% {
+        transform: translateY(87.1vh);
+        width: 100vw;
+        left: 0;
+        top: 5em;
+      }
+  100% {
+        transform: translateY(0vh);
+        width: 100vw;
+        left: 0;
+        bottom: 0;
+       }
 }
