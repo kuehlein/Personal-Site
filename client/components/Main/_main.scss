@@ -1,6 +1,14 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
+  #main-container {
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    z-index: 0;
+  }
+
   .name-container {
     position: fixed;
     display: flex;
@@ -55,13 +63,9 @@ and (orientation : landscape) {
 and (min-width : 1224px) {
   #main-container {
     position: relative;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
-    background-size: cover;
-    // overflow: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
-    // animation: fade-in 0.5s linear;
     z-index: 0;
   }
 
@@ -98,7 +102,6 @@ and (min-width : 1224px) {
 and (min-width : 1824px) {
   // #main-container {
   //   position: relative;
-  //   background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
   //   background-size: cover;
   //   // overflow: scroll;
   //   display: flex;
@@ -159,20 +162,11 @@ and (min-width : 1824px) {
   animation: fade-out 0.5s linear;
 }
 
-// .name-container {
-//   position: fixed;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   z-index: -1;
-// }
-
 .name-position {
   padding: 0;
   margin: 0;
   color: #eee;
   user-select: none;
-  // z-index: -1;
 }
 
 .spinner-container {

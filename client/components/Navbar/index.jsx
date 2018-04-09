@@ -12,6 +12,7 @@ import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
 import face1 from '../../assets/face1.png'
 import glasses from '../../assets/glasses.png'
+import fish from '../../assets/small-fish.png'
 
 
 export default class Navbar extends Component {
@@ -113,7 +114,7 @@ export default class Navbar extends Component {
           <div>
             <NavFace
               text="Menu?"
-              image={ waiter }
+              image={ fish }
               handleClick={ this.handleClick }
               visible={ visible }
             />
