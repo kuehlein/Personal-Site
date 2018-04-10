@@ -121,6 +121,11 @@ export default class Navbar extends Component {
                   image={ glasses }
                   route="about"
                 />
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
                 <NavFace
                   text="My résumé"
                   image={ face1 }
