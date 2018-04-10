@@ -38,7 +38,7 @@ export default class Resume extends Component {
   render() {
     const { pageNumber, numPages } = this.state
     document.title = "My Résumé"
-    const scaleRatio = screen.width > 321 ? 1.6111 : 0.4
+    const scaleRatio = screen.width > 415 ? 1.6111 : 0.4
 
     return (
       <div className="mobile-resume">
@@ -62,7 +62,7 @@ export default class Resume extends Component {
           </a>
         </div>
         {
-          screen.width > 321
+          screen.width > 415
             && <ScrollButton />
         }
       </div>

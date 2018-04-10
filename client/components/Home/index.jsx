@@ -15,12 +15,12 @@ export default class Home extends Component {
 
   render() {
     document.title = "Kyle Uehlein 🏠"
-    const shadow = screen.width > 321 ? 'image-shadow' : ''
+    const shadow = screen.width > 415 ? 'image-shadow' : ''
 
     return (
       <div className={`position-main ${shadow} fade-in`}>
         {
-          screen.width > 321
+          screen.width > 415
             ? <img
                 src={ me1 }
                 alt="this is a picture of me holding a chihuahua"

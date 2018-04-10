@@ -50,7 +50,7 @@ export default class Navbar extends Component {
     const { visible, page } = this.state
     const visibility = visible ? 'visible' : 'invisible'
 
-    return screen.width > 320
+    return screen.width > 414
       ? (
         <header>
           <NavFace
