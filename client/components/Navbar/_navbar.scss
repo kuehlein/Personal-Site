@@ -44,16 +44,17 @@ and (max-width : 320px) {
     left: 2em;
     width: 100%;
     height: 100%;
-    // transition: margin ease 0.5s;
     z-index: 1;
   }
 
   img.menu-toggle.visible {
-    animation: fish-slide-up 1s ease-out;
+    animation: fish-slide-up 1.1s ease-out;
+    animation-fill-mode: forwards;
   }
 
   img.menu-toggle.invisible {
-    animation: fish-slide-down 1s ease-in;
+    animation: fish-slide-down 1.1s ease-in;
+    animation-fill-mode: forwards;
   }
 
   .speech-bubble {
@@ -575,10 +576,10 @@ and (min-width : 1824px) {
 
 @keyframes fish-slide-up { // portrait
   0% { transform: translateY(0em); }
-  100% { transform: translateY(-28em); }
+  100% { transform: translateY(-28em); top: 32em; }
 }
 
 @keyframes fish-slide-down { // portrait
-  0% { transform: translateY(-28em); }
+  0% { transform: translateY(-28em); top: 32em; }
   100% { transform: translateY(0em); }
 }
