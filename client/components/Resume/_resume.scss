@@ -8,9 +8,9 @@ and (max-width : 414px) {
   .resume-pdf {
     position: fixed;
     overflow: hidden;
-    top: 6em;
-    max-width: 78vw;
-    max-height: 53vh;
+    top: 4em;
+    max-width: 90vw;
+    max-height: 68vh;
     margin: 0 1em 0 1em;
     box-shadow: 0.7em 0.7em 1em #111;
   }
@@ -18,12 +18,12 @@ and (max-width : 414px) {
   .button-container {
     position: fixed;
     font-size: 1em;
-    bottom: 8em;
+    bottom: 7em;
     align-self: center;
     text-align: center;
     border-radius: 0.5em;
     padding: 0.8em;
-    margin-left: 28.5vw;
+    margin-left: 67.35vw;
     box-shadow: 0.7em 0.7em 1em #111;
     z-index: -1;
   }
