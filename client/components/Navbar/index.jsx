@@ -48,6 +48,7 @@ export default class Navbar extends Component {
 
   render() {
     const { visible, page } = this.state
+    const visibility = visible ? 'visible' : 'invisible'
 
     return screen.width > 320
       ? (
@@ -101,7 +102,12 @@ export default class Navbar extends Component {
             />
             <SocailLinks />
           </div>
-          <div>
+          <div style={{
+                height: 0,
+                width: 0,
+                margin: 0,
+                padding: 0,
+              }}>
             <NavFace
               text="Menu?"
               image={ fish }
@@ -120,15 +126,9 @@ export default class Navbar extends Component {
                   image={ face1 }
                   route="resume"
                 />
-                {/* v temporarily used for positioning */}
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                {/* ^ temporarily used for  positioning */}
               </Menu>
             }
+            <div id="phone-menu" className={`${typeof visible !== "string" ? visibility: visible}`}></div>
           </div>
         </header>
       )
