@@ -49,7 +49,7 @@ export default class Navbar extends Component {
   render() {
     const { visible, page } = this.state
 
-    return screen.width > 321
+    return screen.width > 320
       ? (
         <header>
           <NavFace
@@ -72,16 +72,6 @@ export default class Navbar extends Component {
                   image={ glasses }
                   route="about"
                 />
-                {/* <NavFace
-                  text={ "i made this stuff 🛠" }
-                  image={ "favicon.ico" }
-                  route={ "projects" }
-                />
-                <NavFace
-                  text={ "musings on software 📝" }
-                  image={ "favicon.ico" }
-                  route={ "blog" }
-                /> */}
                 <NavFace
                   text="My résumé"
                   image={ face1 }
@@ -125,16 +115,6 @@ export default class Navbar extends Component {
                   image={ glasses }
                   route="about"
                 />
-                {/* <NavFace
-                  text={ "i made this stuff 🛠" }
-                  image={ "favicon.ico" }
-                  route={ "projects" }
-                />
-                <NavFace
-                  text={ "musings on software 📝" }
-                  image={ "favicon.ico" }
-                  route={ "blog" }
-                /> */}
                 <NavFace
                   text="My résumé"
                   image={ face1 }

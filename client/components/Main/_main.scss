@@ -142,13 +142,9 @@ and (min-width : 1824px) {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
   background-size: cover;
   overflow: scroll;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   height: 100vh;
   width: 100vw;
   animation: fade-in 0.5s linear;
-  // z-index: 0;
 }
 
 .fade-in {

@@ -16,18 +16,19 @@ and (max-width : 320px) {
     justify-content: space-between;
   }
 
-  // .logo-container {
-  //   display: flex;
-  //   max-width: 3em;
-  // }
+  .logo-container {
+    position: static;
+    height: 3em;
+    width: 3em;
+  }
 
-  // .visible > .logo-container {
-  //   height: 3em;
-  // }
+  .visible > .logo-container {
+    height: 3em;
+  }
 
-  // .logo-container > a {
-  //   height: 3em;
-  // }
+  .logo-container > a {
+    height: 3em;
+  }
 
   .logo {
     height: 3em;
@@ -44,16 +45,16 @@ and (max-width : 320px) {
     left: 2em;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
   }
 
   img.menu-toggle.visible {
-    animation: fish-slide-up 1.1s ease-out;
+    animation: fish-slide-up 1.2s linear;
     animation-fill-mode: forwards;
   }
 
   img.menu-toggle.invisible {
-    animation: fish-slide-down 1.1s ease-in;
+    animation: fish-slide-down 1.1s linear;
     animation-fill-mode: forwards;
   }
 
@@ -106,10 +107,6 @@ and (max-width : 320px) {
     animation: mobile-slide-up 1.2s ease-out;
   }
 
-  .initial {
-    //
-  }
-
   #menu {
     display: flex;
     flex-direction: row;
@@ -117,6 +114,7 @@ and (max-width : 320px) {
     top: 3em;
     left: 4em;
     height: 100vh;
+    z-index: -1;
   }
 }
 
@@ -187,9 +185,12 @@ and (min-width : 1264px) {
   .menu-toggle {
     height: 25em;
     margin: 0 0 0 -2em;
-    // transition: margin ease 0.5s;
     cursor: pointer;
     z-index: 2;
+  }
+
+  .menu-toggle:hover {
+    margin-left: 0em;
   }
 
   .menu-toggle:hover ~ .speech-bubble, .speech-bubble:after {
@@ -335,6 +336,10 @@ and (min-width : 1824px) {
   //   z-index: 2;
   // }
 
+  // .menu-toggle:hover {
+  //   margin-left: 0em;
+  // }
+
   // .menu-toggle:hover ~ .speech-bubble, .speech-bubble:after {
   //   margin: 3.2em 0 0 6.5em;
   //   display: flex;
@@ -455,10 +460,6 @@ and (min-width : 1824px) {
   user-select: none;
 }
 
-.menu-toggle:hover {
-  margin-left: 0em;
-}
-
 .social-link {
   user-select: none;
 }
@@ -552,7 +553,7 @@ and (min-width : 1824px) {
         bottom: 0;
       }
   100% {
-        transform: translateY(87.1vh);
+        transform: translateY(87.5vh);
         width: 100vw;
         left: 0;
         top: 5em;
@@ -561,7 +562,7 @@ and (min-width : 1824px) {
 
 @keyframes mobile-slide-down { // portrait
   0% {
-        transform: translateY(87.1vh);
+        transform: translateY(87.5vh);
         width: 100vw;
         left: 0;
         top: 5em;

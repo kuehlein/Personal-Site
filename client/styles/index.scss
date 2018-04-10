@@ -117,10 +117,8 @@ body {
 }
 
 .position-main { // home, about
-  // position: absolute;
   padding: 0;
   margin: 0;
-  // z-index: -1;
 }
 
 .center-text { // about, contact
@@ -128,8 +126,6 @@ body {
 }
 
 #top-button { // scrollbutton, about, resume
-  // display: none;
-  // position: fixed;
   background-color: #eee;
   color: black;
   text-align: center;
@@ -137,7 +133,6 @@ body {
   outline: none;
   user-select: none;
   font-family: 'Courgette', cursive;
-  // z-index: 0;
 }
 
 #top-button:hover { // scrollbutton, about
