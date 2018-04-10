@@ -1,6 +1,6 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
-and (max-width : 320px) {
+and (max-width : 414px) {
   .text-container {
     position: fixed;
     overflow: scroll;
@@ -14,11 +14,11 @@ and (max-width : 320px) {
   }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-  /* Styles */
-}
+// /* Smartphones (landscape) ----------- */
+// @media only screen
+// and (min-width : 321px) {
+//   /* Styles */
+// }
 
 /* iPads (portrait) ----------- */
 @media only screen

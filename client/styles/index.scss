@@ -1,6 +1,6 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
-and (max-width : 320px) {
+and (max-width : 414px) {
   .position-main { // home, about
     position: absolute;
     bottom: -1em;
@@ -27,11 +27,11 @@ and (max-width : 320px) {
   }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-  /* Styles */
-}
+// /* Smartphones (landscape) ----------- */
+// @media only screen
+// and (min-width : 321px) {
+//   /* Styles */
+// }
 
 /* iPads (portrait) ----------- */
 @media only screen

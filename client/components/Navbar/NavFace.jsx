@@ -8,7 +8,7 @@ export default function NavFace(props) {
   const { route, image, handleClick, visible, text, page } = props
   const currentPage = `/${route}` === window.location.pathname
   const visibility = visible ? 'visible' : 'invisible'
-  const mobile = screen.width < 321
+  const mobile = screen.width < 415
 
   return (
     <div className="logo-container">
