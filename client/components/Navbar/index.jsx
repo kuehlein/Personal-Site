@@ -6,10 +6,13 @@ import NavFace from './NavFace'
 import Menu from './Menu'
 import SocailLinks from './SocialLinks'
 
+import './_navbar.scss'
+
 import homeFace from '../../assets/homeFace.png'
 import waiter from '../../assets/waiter.png'
 import face1 from '../../assets/face1.png'
 import glasses from '../../assets/glasses.png'
+import fish from '../../assets/small-fish.png'
 
 
 export default class Navbar extends Component {
@@ -45,59 +48,95 @@ export default class Navbar extends Component {
 
   render() {
     const { visible, page } = this.state
+    const visibility = visible ? 'visible' : 'invisible'
 
-    return (
-      <header>
-        <NavFace
-          text="There's no place like home..."
-          image={ homeFace }
-          route=""
-          page={ page }
-          />
-        <div>
+    return screen.width > 320
+      ? (
+        <header>
           <NavFace
-            text="Menu?"
-            image={ waiter }
-            handleClick={ this.handleClick }
-            visible={ visible }
-          />
-          {
-            <Menu visible={ visible }>
-              <NavFace
-                text="About me"
-                image={ glasses }
-                route="about"
-              />
-              {/* <NavFace
-                text={ "i made this stuff 🛠" }
-                image={ "favicon.ico" }
-                route={ "projects" }
-              />
-              <NavFace
-                text={ "musings on software 📝" }
-                image={ "favicon.ico" }
-                route={ "blog" }
-              /> */}
-              <NavFace
-                text="My résumé"
-                image={ face1 }
-                route="resume"
-              />
-              {/* v temporarily used for positioning */}
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              {/* ^ temporarily used for positioning */}
-            </Menu>
-          }
-        </div>
-        <SocailLinks />
-      </header>
-    )
+            text="There's no place like home..."
+            image={ homeFace }
+            route=""
+            page={ page }
+            />
+          <div>
+            <NavFace
+              text="Menu?"
+              image={ waiter }
+              handleClick={ this.handleClick }
+              visible={ visible }
+            />
+            {
+              <Menu visible={ visible }>
+                <NavFace
+                  text="About me"
+                  image={ glasses }
+                  route="about"
+                />
+                <NavFace
+                  text="My résumé"
+                  image={ face1 }
+                  route="resume"
+                />
+                {/* v temporarily used for positioning */}
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                {/* ^ temporarily used for positioning */}
+              </Menu>
+            }
+          </div>
+          <SocailLinks />
+        </header>
+        )
+      : (
+        <header>
+          <div className="mobile-nav">
+            <NavFace
+              text="There's no place like home..."
+              image={ homeFace }
+              route=""
+              page={ page }
+            />
+            <SocailLinks />
+          </div>
+          <div style={{
+                height: 0,
+                width: 0,
+                margin: 0,
+                padding: 0,
+              }}>
+            <NavFace
+              text="Menu?"
+              image={ fish }
+              handleClick={ this.handleClick }
+              visible={ visible }
+            />
+            {
+              <Menu visible={ visible }>
+                <NavFace
+                  text="About me"
+                  image={ glasses }
+                  route="about"
+                />
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <NavFace
+                  text="My résumé"
+                  image={ face1 }
+                  route="resume"
+                />
+              </Menu>
+            }
+            <div id="phone-menu" className={`${typeof visible !== "string" ? visibility: visible}`}></div>
+          </div>
+        </header>
+      )
   }
 
 }
-
-// fix timing on initial menu open

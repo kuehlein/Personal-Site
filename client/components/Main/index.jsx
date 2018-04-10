@@ -1,12 +1,15 @@
 'use strict'
 
 import React from 'react'
-import { Navbar } from './'
+import { Navbar } from '../'
+
+import './_main.scss'
 
 
 export default function Main(props) {
   return (
-    <div id="main-container">
+    <div id="main-container"
+    className="mobile-frame">
       <Navbar />
       <div className="name-container">
         <h1 className="name-position">K</h1>

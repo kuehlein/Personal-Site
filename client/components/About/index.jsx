@@ -1,7 +1,9 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { ScrollButton } from './'
+import { ScrollButton } from '../'
+
+import './_about.scss'
 
 
 export default class About extends Component {

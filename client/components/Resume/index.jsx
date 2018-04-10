@@ -1,10 +1,12 @@
 'use strict'
 
 import React, { Component } from 'react'
-import ScrollButton from './ScrollButton'
 import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
+import ScrollButton from '../ScrollButton'
 
-import resume from '../assets/resume.pdf'
+import './_resume.scss'
+
+import resume from '../../assets/resume.pdf'
 
 
 setOptions({
@@ -36,16 +38,17 @@ export default class Resume extends Component {
   render() {
     const { pageNumber, numPages } = this.state
     document.title = "My Résumé"
+    const scaleRatio = screen.width > 321 ? 1.6111 : 0.4
 
     return (
-      <div>
+      <div className="mobile-resume">
         <div className={`resume-container fade-${this.state.transition}`}>
           <Document
             file={ resume }
             onLoadSuccess={ this.onDocumentLoad }
             className="resume-pdf"
           >
-            <Page pageNumber={ pageNumber } scale={ 1.6111 }/>
+            <Page pageNumber={ pageNumber } scale={ scaleRatio }/>
           </Document>
         </div>
         {/* <p>Page { pageNumber } of { numPages }</p> */}
@@ -58,7 +61,10 @@ export default class Resume extends Component {
             Download
           </a>
         </div>
-        <ScrollButton />
+        {
+          screen.width > 321
+            && <ScrollButton />
+        }
       </div>
     )
   }

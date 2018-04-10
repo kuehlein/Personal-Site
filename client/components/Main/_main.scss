@@ -1,0 +1,191 @@
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  #main-container {
+    position: relative;
+    z-index: 0;
+  }
+
+  .name-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 1em;
+    bottom: 2em;
+    z-index: 0;
+  }
+
+  .name-position {
+    font-size: 2.6em;
+    text-shadow: 0.15em 0.15em 0.04em #000;
+    z-index: 0;
+  }
+
+  .gourd-spinner {
+    width: 6em;
+    height: 6em;
+  }
+
+  .gourd-spinner svg {
+    width: 12em;
+    height: 12em;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  #main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+
+  .main-child {
+    margin: 3em 0em 0em 15.5em;
+    width: 80vw;
+    height: 85vh;
+  }
+
+  .name-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 9.4em;
+    z-index: -1;
+  }
+
+  .name-position {
+    font-size: 2.6em;
+    text-shadow: 0.15em 0.15em 0.04em #000;
+    cursor: default;
+    z-index: -1;
+  }
+
+  .gourd-spinner {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  // #main-container {
+  //   position: relative;
+  //   background-size: cover;
+  //   // overflow: scroll;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   // animation: fade-in 0.5s linear;
+  //   z-index: 0;
+  // }
+
+  // .main-child {
+  //   margin: 3em 0em 0em 15.5em;
+  //   width: 80vw;
+  //   height: 85vh;
+  // }
+
+  // .name-container {
+  //   position: fixed;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   left: 9.4em;
+  //   z-index: -1;
+  // }
+
+  // .name-position {
+  //   font-size: 2.6em;
+  //   text-shadow: 0.15em 0.15em 0.04em #000;
+  //   cursor: default;
+  //   z-index: -1;
+  // }
+
+  // .gourd-spinner {
+  //   width: 10em;
+  //   height: 10em;
+  // }
+}
+
+/* Screen size neutral ----------- */
+#main-container {
+  position: relative;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
+  background-size: cover;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  animation: fade-in 0.5s linear;
+}
+
+.fade-in {
+  animation: fade-in 0.5s linear;
+}
+
+.fade-out {
+  animation: fade-out 0.5s linear;
+}
+
+.name-position {
+  padding: 0;
+  margin: 0;
+  color: #eee;
+  user-select: none;
+}
+
+.spinner-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gourd-spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Animations ----------- */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fish-slide-in {
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes fish-slide-out {
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}

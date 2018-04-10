@@ -28,6 +28,7 @@ export default class AppRoutes extends Component {
         {
           this.state.loading
             ? <div className="spinner-container">
+                {/* <img className="gourd-spinner" src={ gourdSpinner }/> */}
                 <div className="gourd-spinner">
                   { gourdSpinner }
                 </div>
@@ -41,7 +42,7 @@ export default class AppRoutes extends Component {
                   <Route exact path="/resume" component={ Resume } />
                   <Redirect to="/" />
                 </Switch>
-            </Main>
+              </Main>
         }
       </div>
     )
