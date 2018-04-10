@@ -1,7 +1,30 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
-  /* Styles */
+  .position-main { // home, about
+    position: absolute;
+    bottom: -1em;
+    z-index: -1;
+  }
+
+  .mobile-frame {
+    overflow: hidden !important;
+  }
+
+  #top-button { // scrollbutton, about, resume
+    display: none;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+    z-index: 0;
+  }
+
+  .image-shadow { // navbar, about
+    box-shadow: 0.7em 0.7em 1em #111;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -98,10 +121,8 @@ body {
 }
 
 .position-main { // home, about
-  // position: absolute;
   padding: 0;
   margin: 0;
-  // z-index: -1;
 }
 
 .center-text { // about, contact
@@ -109,8 +130,6 @@ body {
 }
 
 #top-button { // scrollbutton, about, resume
-  // display: none;
-  // position: fixed;
   background-color: #eee;
   color: black;
   text-align: center;
@@ -118,7 +137,6 @@ body {
   outline: none;
   user-select: none;
   font-family: 'Courgette', cursive;
-  // z-index: 0;
 }
 
 #top-button:hover { // scrollbutton, about
@@ -135,3 +153,14 @@ body {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+@keyframes slide-in {
+  0% { width: 0vw; display: auto; }
+  100% { width: 100vw; }
+}
+
+@keyframes slide-out {
+  0% { width: 100vw; display: auto; }
+  100% { width: 0vw; display: none; }
+}
+

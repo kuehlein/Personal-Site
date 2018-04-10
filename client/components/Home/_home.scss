@@ -1,7 +1,17 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
-  /* Styles */
+  .text-over-picture {
+    position: absolute;
+    bottom: 15em;
+    text-align: center;
+    margin-left: 2.5em;
+    z-index: 0;
+  }
+
+  .text-over-picture > h3 {
+    margin: 0;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -53,5 +63,4 @@ and (min-width : 1824px) {
 /* Screen size neutral ----------- */
 .text-over-picture {
   user-select: none;
-  // z-index: 0;
 }

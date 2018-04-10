@@ -1,7 +1,36 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
-  /* Styles */
+  #main-container {
+    position: relative;
+    z-index: 0;
+  }
+
+  .name-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 1em;
+    bottom: 2em;
+    z-index: 0;
+  }
+
+  .name-position {
+    font-size: 2.6em;
+    text-shadow: 0.15em 0.15em 0.04em #000;
+    z-index: 0;
+  }
+
+  .gourd-spinner {
+    width: 6em;
+    height: 6em;
+  }
+
+  .gourd-spinner svg {
+    width: 12em;
+    height: 12em;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -31,13 +60,9 @@ and (orientation : landscape) {
 and (min-width : 1224px) {
   #main-container {
     position: relative;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
-    background-size: cover;
-    // overflow: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
-    // animation: fade-in 0.5s linear;
     z-index: 0;
   }
 
@@ -74,7 +99,6 @@ and (min-width : 1224px) {
 and (min-width : 1824px) {
   // #main-container {
   //   position: relative;
-  //   background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
   //   background-size: cover;
   //   // overflow: scroll;
   //   display: flex;
@@ -118,13 +142,9 @@ and (min-width : 1824px) {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Carl_Blechen_-_Tiberiusfelsen_auf_Capri_%281828-29%29.jpg');
   background-size: cover;
   overflow: scroll;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   height: 100vh;
   width: 100vw;
   animation: fade-in 0.5s linear;
-  // z-index: 0;
 }
 
 .fade-in {
@@ -135,20 +155,11 @@ and (min-width : 1824px) {
   animation: fade-out 0.5s linear;
 }
 
-// .name-container {
-//   position: fixed;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   z-index: -1;
-// }
-
 .name-position {
   padding: 0;
   margin: 0;
   color: #eee;
   user-select: none;
-  // z-index: -1;
 }
 
 .spinner-container {
@@ -167,16 +178,6 @@ and (min-width : 1824px) {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-@keyframes slide-in {
-  0% { width: 0vw; display: auto; }
-  100% { width: 100vw; }
-}
-
-@keyframes slide-out {
-  0% { width: 100vw; display: auto; }
-  100% { width: 0vw; display: none; }
 }
 
 @keyframes fish-slide-in {

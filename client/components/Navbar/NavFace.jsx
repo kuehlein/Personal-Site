@@ -7,18 +7,20 @@ import { Link } from 'react-router-dom'
 export default function NavFace(props) {
   const { route, image, handleClick, visible, text, page } = props
   const currentPage = `/${route}` === window.location.pathname
+  const visibility = visible ? 'visible' : 'invisible'
+  const mobile = screen.width < 321
 
   return (
     <div className="logo-container">
       {
         route !== undefined
           ? <Link to={ `/${route}` }>
-              <img src={ `${image}` } className="logo face-slide" />
+              <img src={ `${image}` } className={`logo ${!route ? "home-logo": "face-slide"}`} />
             </Link>
           : <img
               src={ `${image}` }
               onClick={ () => handleClick(visible) }
-              className="menu-toggle"
+              className={`menu-toggle ${mobile && typeof visible !== "string" ? visibility : visible}`}
             />
       }
       <div className="speech-bubble image-shadow">

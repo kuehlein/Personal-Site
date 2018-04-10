@@ -1,7 +1,17 @@
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
-  /* Styles */
+  .text-container {
+    position: fixed;
+    overflow: scroll;
+    top: 7em;
+    padding: 1em;
+    max-width: 78vw;
+    max-height: 70vh;
+    margin: 0 2em 0 2em;
+    font-size: 0.5em;
+    z-index: 0;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -29,14 +39,11 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
-  .text-container { // about
+  .text-container {
     padding: 2em;
     max-width: 59.83em;
     min-height: 40em;
     margin: 0 0 5em 0;
-    box-shadow: 0.7em 0.7em 1em #111;
-    background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
-    font-weight: 700;
     font-size: 1.1em;
   }
 }
@@ -44,14 +51,18 @@ and (min-width : 1224px) {
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
-  // .text-container { // about
+  // .text-container {
   //   padding: 2em;
   //   max-width: 59.83em;
   //   min-height: 40em;
   //   margin: 0 0 5em 0;
-  //   box-shadow: 0.7em 0.7em 1em #111;
-  //   background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
-  //   font-weight: 700;
   //   font-size: 1.1em;
   // }
+}
+
+/* Screen size neutral ----------- */
+.text-container {
+  box-shadow: 0.7em 0.7em 1em #111;
+  background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
+  font-weight: 700;
 }
