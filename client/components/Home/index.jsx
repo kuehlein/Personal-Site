@@ -31,10 +31,14 @@ export default class Home extends Component {
               />
         }
         <div className="text-over-picture">
-          <h3>Writer, musician,</h3>
+          <h3>Creative solutions</h3>
+          <h3>for your</h3>
+          <h3>software needs</h3>
+          <h3>since 2017</h3>
+          {/* <h3>Writer, musician,</h3>
           <h3>interesting individual,</h3>
           <h3>but in a good way.</h3>
-          <h5>(and software engineer extraordinaire)</h5>
+          <h5>(and software engineer extraordinaire)</h5> */}
         </div>
       </div>
     )
