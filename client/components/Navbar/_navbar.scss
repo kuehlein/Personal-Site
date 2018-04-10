@@ -34,9 +34,7 @@ and (max-width : 320px) {
     width: 3em;
   }
 
-  .logo.face-slide {
-    // position: relative;
-    // z-index: 1;
+  .home-logo {
     margin-left: 0.3em;
   }
 
@@ -46,7 +44,6 @@ and (max-width : 320px) {
     left: 2em;
     width: 100%;
     height: 100%;
-    // z-index: 0;
   }
 
   img.menu-toggle.visible {
@@ -70,7 +67,6 @@ and (max-width : 320px) {
     border-radius: 1em;
     padding: 0.5em;
     margin: 3.2em 0 0 4.5em;
-    cursor: default;
     user-select: none;
     z-index: 1;
   }
@@ -108,11 +104,24 @@ and (max-width : 320px) {
     animation: mobile-slide-up 1.2s ease-out;
   }
 
+  .visible > div {
+    animation: face-slide-up 1.2s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .invisible > div {
+    animation: face-slide-down 1.2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
   #menu {
     margin: 0;
     padding: 0;
     height: 0;
     width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   #phone-menu {
@@ -311,6 +320,16 @@ and (min-width : 1264px) {
   .invisible {
     animation: slide-out 1.2s ease-in;
   }
+
+  .visible > div {
+    animation: face-slide-in 1.2s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .invisible > div {
+    animation: face-slide-out 1.2s ease-in;
+    animation-fill-mode: forwards;
+  }
 }
 
 
@@ -460,6 +479,16 @@ and (min-width : 1824px) {
   // .invisible {
   //   animation: slide-out 1.2s ease-in;
   // }
+
+  // .visible > div {
+  //   animation: face-slide-in 1.2s ease-out;
+  //   animation-fill-mode: forwards;
+  // }
+
+  // .invisible > div {
+  //   animation: face-slide-out 1.2s ease-in;
+  //   animation-fill-mode: forwards;
+  // }
 }
 
 /* Screen size neutral ----------- */
@@ -512,16 +541,6 @@ and (min-width : 1824px) {
 
 .face-slide {
   position: static;
-}
-
-.visible > div {
-  animation: face-slide-in 1.2s ease-out;
-  animation-fill-mode: forwards;
-}
-
-.invisible > div {
-  animation: face-slide-out 1.2s ease-in;
-  animation-fill-mode: forwards;
 }
 
 .fade-out-menu > div {
@@ -600,4 +619,14 @@ and (min-width : 1824px) {
 @keyframes fish-slide-down { // portrait
   0% { transform: translateY(-28em); top: 32em; }
   100% { transform: translateY(0em); }
+}
+
+@keyframes face-slide-up { // portrait
+  0% { transform: translate(44vw, 2em); opacity: 0; display: auto; }
+  100% { transform: translate(44vw, 20vh); opacity: 1; }
+}
+
+@keyframes face-slide-down { // portrait
+  0% { transform: translate(44vw, 20vh); opacity: 1; }
+  100% { transform: translate(44vw, 2em); display: none; opacity: 0; }
 }

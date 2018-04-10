@@ -15,7 +15,7 @@ export default function NavFace(props) {
       {
         route !== undefined
           ? <Link to={ `/${route}` }>
-              <img src={ `${image}` } className="logo face-slide" />
+              <img src={ `${image}` } className={`logo ${!route ? "home-logo": "face-slide"}`} />
             </Link>
           : <img
               src={ `${image}` }
