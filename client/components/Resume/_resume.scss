@@ -3,7 +3,6 @@
 and (max-width : 320px) {
   .resume-container {
     display: flex;
-    z-index: -1;
   }
 
   .resume-pdf {
@@ -14,7 +13,6 @@ and (max-width : 320px) {
     max-height: 53vh;
     margin: 0 1em 0 1em;
     box-shadow: 0.7em 0.7em 1em #111;
-    z-index: -1;
   }
 
   .button-container {
@@ -27,6 +25,11 @@ and (max-width : 320px) {
     padding: 0.8em;
     margin-left: 28.5vw;
     box-shadow: 0.7em 0.7em 1em #111;
+    z-index: -1;
+  }
+
+  .mobile-resume {
+    position: fixed;
     z-index: -1;
   }
 }
@@ -123,17 +126,8 @@ and (min-width : 1824px) {
 }
 
 /* Screen size neutral ----------- */
-.resume-container {
-  // z-index: -1;
-}
-
-.resume-pdf {
-  // z-index: -1;
-}
-
 .button-container {
   font-family: 'Cutive Mono', monospace;
-  // position: fixed;
   background-color: #eee;
   text-align: center;
   border: none;
@@ -149,5 +143,4 @@ and (min-width : 1824px) {
   font-family: 'Courgette', cursive;
   text-decoration: none;
   color: #000;
-  // z-index: 0;
 }

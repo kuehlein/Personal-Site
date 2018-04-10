@@ -27,7 +27,7 @@ export default class Home extends Component {
               />
             : <img
                 src={ me2 }
-                alt="this is a picture of me holding a chihuahua"
+                alt="me, this picture is overexposed"
               />
         }
         <div className="text-over-picture">

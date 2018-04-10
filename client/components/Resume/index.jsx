@@ -41,7 +41,7 @@ export default class Resume extends Component {
     const scaleRatio = screen.width > 321 ? 1.6111 : 0.4
 
     return (
-      <div>
+      <div className="mobile-resume">
         <div className={`resume-container fade-${this.state.transition}`}>
           <Document
             file={ resume }

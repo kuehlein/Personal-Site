@@ -3,8 +3,12 @@
 and (max-width : 320px) {
   .position-main { // home, about
     position: absolute;
-    bottom: 0;
+    bottom: -1em;
     z-index: -1;
+  }
+
+  .mobile-frame {
+    overflow: hidden !important;
   }
 
   #top-button { // scrollbutton, about, resume
@@ -20,7 +24,7 @@ and (max-width : 320px) {
 
   .image-shadow { // navbar, about
     box-shadow: 0.7em 0.7em 1em #111;
-  } // remove from home
+  }
 }
 
 /* Smartphones (landscape) ----------- */
