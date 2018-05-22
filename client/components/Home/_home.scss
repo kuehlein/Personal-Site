@@ -41,8 +41,10 @@ and (orientation : portrait) {
 and (min-width : 1224px) {
   .text-over-picture {
     position: relative;
-    top: -38.1em;
-    left: 4em;
+    // top: -38.1em;
+    top: -29em;
+    color: white;
+    left: 5em;
     cursor: default;
     z-index: 0;
   }
@@ -62,5 +64,9 @@ and (min-width : 1824px) {
 
 /* Screen size neutral ----------- */
 .text-over-picture {
+  user-select: none;
+}
+
+.picture-frame {
   user-select: none;
 }
