@@ -20,7 +20,7 @@ export default function NavFace(props) {
           : <img
               src={ `${image}` }
               onClick={ () => handleClick(visible) }
-              className={`menu-toggle ${mobile && typeof visible !== "string" ? visibility : visible}`}
+              className={`menu-toggle ${mobile && typeof visible !== "string" && visibility}`}
             />
       }
       <div className="speech-bubble image-shadow">
