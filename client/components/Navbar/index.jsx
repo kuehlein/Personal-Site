@@ -102,12 +102,7 @@ export default class Navbar extends Component {
             />
             <SocailLinks />
           </div>
-          <div style={{
-                height: 0,
-                width: 0,
-                margin: 0,
-                padding: 0,
-              }}>
+          <div>
             <NavFace
               text="Menu?"
               image={ fish }

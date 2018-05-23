@@ -40,7 +40,7 @@ and (max-width : 414px) {
 
   .menu-toggle {
     position: fixed;
-    bottom: -38em;
+    bottom: -80vh; // -38em
     left: 2em;
     width: 100%;
     height: 100%;
@@ -158,6 +158,13 @@ and (max-width : 414px) {
   #phone-menu.initial {
     display: none;
   }
+
+  // .? { // navbar/index.js on div above menu toggle
+  //   height: 0;
+  //   width: 0;
+  //   margin: 0;
+  //   padding: 0;
+  // }
 }
 
 // /* Smartphones (landscape) ----------- */
