@@ -3,15 +3,13 @@
 and (max-width : 414px) {
   .resume-container {
     display: flex;
+    width: 100vw;
+    justify-content: center;
   }
 
   .resume-pdf {
     position: fixed;
-    overflow: scroll;
     top: 3em;
-    // max-width: 90vw;
-    // max-height: 68vh;
-    // margin: 0 1em 0 1em;
     box-shadow: 0.7em 0.7em 1em #111;
   }
 
