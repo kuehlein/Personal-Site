@@ -52,6 +52,11 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
+  html {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
   .image-shadow { // navbar, home, about
     box-shadow: 0.7em 0.7em 1em #111;
   }
@@ -79,6 +84,11 @@ and (min-width : 1224px) {
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
+  // html {
+  //   box-sizing: border-box;
+  //   overflow: hidden;
+  // }
+
   // .image-shadow { // navbar, home, about
   //   box-shadow: 0.7em 0.7em 1em #111;
   // }
@@ -104,10 +114,10 @@ and (min-width : 1824px) {
 }
 
 /* Screen size neutral ----------- */
-html {
-  box-sizing: border-box;
-  overflow: hidden;
-}
+// html {
+//   box-sizing: border-box;
+//   overflow: hidden;
+// }
 
 *, *:before, *:after {
   box-sizing: inherit;
