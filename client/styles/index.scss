@@ -1,7 +1,7 @@
 /* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 414px) {
-  .position-main { // home, about
+@media only screen and (max-width: 414px) {
+  .position-main {
+    // home, about
     position: absolute;
     bottom: -1em;
     z-index: -1;
@@ -11,7 +11,8 @@ and (max-width : 414px) {
     overflow: hidden !important;
   }
 
-  #top-button { // scrollbutton, about, resume
+  #top-button {
+    // scrollbutton, about, resume
     display: none;
     position: fixed;
     bottom: 2em;
@@ -22,7 +23,8 @@ and (max-width : 414px) {
     z-index: 0;
   }
 
-  .image-shadow { // navbar, about
+  .image-shadow {
+    // navbar, about
     box-shadow: 0.7em 0.7em 1em #111;
   }
 }
@@ -33,42 +35,44 @@ and (max-width : 414px) {
 //   /* Styles */
 // }
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    /* Styles */
-  }
+// /* iPads (portrait) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px)
+// and (orientation : portrait) {
+//     /* Styles */
+//   }
 
-  /* iPads (landscape) ----------- */
-  @media only screen
-  and (min-device-width : 768px)
-  and (max-device-width : 1024px)
-  and (orientation : landscape) {
-    /* Styles */
-  }
+//   /* iPads (landscape) ----------- */
+//   @media only screen
+//   and (min-device-width : 768px)
+//   and (max-device-width : 1024px)
+//   and (orientation : landscape) {
+//     /* Styles */
+//   }
 
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
+/* Desktops and laptops ----1224px------- */
+@media only screen and (min-width: 415px) {
   html {
     box-sizing: border-box;
     overflow: hidden;
   }
 
-  .image-shadow { // navbar, home, about
+  .image-shadow {
+    // navbar, home, about
     box-shadow: 0.7em 0.7em 1em #111;
   }
 
-  .position-main { // home, about
+  .position-main {
+    // home, about
     position: absolute;
     width: 59.83em;
     height: 40em;
     z-index: -1;
   }
 
-  #top-button { // scrollbutton, about, resume
+  #top-button {
+    // scrollbutton, about, resume
     display: none;
     position: fixed;
     bottom: 2em;
@@ -82,8 +86,7 @@ and (min-width : 1224px) {
 }
 
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   // html {
   //   box-sizing: border-box;
   //   overflow: hidden;
@@ -119,7 +122,9 @@ and (min-width : 1824px) {
 //   overflow: hidden;
 // }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -127,50 +132,74 @@ body {
   margin: 0;
   background: transparent;
   background: #000;
-  font-family: 'Cutive Mono', monospace;
+  font-family: "Cutive Mono", monospace;
 }
 
-.position-main { // home, about
+.position-main {
+  // home, about
   padding: 0;
   margin: 0;
 }
 
-.center-text { // about, contact
+.center-text {
+  // about, contact
   text-align: center;
 }
 
-#top-button { // scrollbutton, about, resume
+#top-button {
+  // scrollbutton, about, resume
   background-color: #eee;
   color: black;
   text-align: center;
   border: none;
   outline: none;
   user-select: none;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
-#top-button:hover { // scrollbutton, about
+#top-button:hover {
+  // scrollbutton, about
   background-color: #ccc;
 }
 
 /* Animations ----------- */
-@keyframes fade-in { // main, home, resume, about
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes fade-in {
+  // main, home, resume, about
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes fade-out { // home, resume, about
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes fade-out {
+  // home, resume, about
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes slide-in {
-  0% { width: 0vw; display: auto; }
-  100% { width: 100vw; }
+  0% {
+    width: 0vw;
+    display: auto;
+  }
+  100% {
+    width: 100vw;
+  }
 }
 
 @keyframes slide-out {
-  0% { width: 100vw; display: auto; }
-  100% { width: 0vw; display: none; }
+  0% {
+    width: 100vw;
+    display: auto;
+  }
+  100% {
+    width: 0vw;
+    display: none;
+  }
 }
-
