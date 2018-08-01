@@ -1,63 +1,98 @@
-'use strict'
+"use strict";
 
-import React, { Component } from 'react'
-import { ScrollButton } from '../'
+import React, { Component } from "react";
+import { ScrollButton } from "../";
 
-import './_about.scss'
-
+import "./_about.scss";
 
 export default class About extends Component {
-
   componentWillUnmount() {
-    window.dispatchEvent(new Event('popstate'))
+    window.dispatchEvent(new Event("popstate"));
   }
 
   render() {
-    document.title = "$ whoami"
+    document.title = "$ whoami";
 
     return (
-      <div className='position-main fade-in'>
-        <div className='text-container'>
-          <h1 className='center-text'>My Story</h1>
-          <p>
-            For as long as I can remember, I have wanted to be a writer. Fascination with plot grew into admiration for description and blossomed with a deep infatuation for the abstract concepts conveyed through words alone using symbolism, metaphor, allegory, and the like. What does it mean to know something? What is information, and how do we share it? I fell in love.
+      <div className="position-main fade-in">
+        <div className="text-container">
+          <h1 className="center-text">About Me</h1>
+          <p className="text-indent-about">
+            Hi, my name is Kyle Uehlein. I suppose that I am a lot of things; a
+            writer, musician and software engineer to name a few, but if I had
+            to guess, I would say that you're most likely interested in the
+            latter.
           </p>
-
-          <p>
-            During my final year of high school, I was emancipated and self-reliant. I was free to pursue my passions, yet bound by the limitations of my needs. I took on hard work, washing dishes, cooking, construction, all for the sake of self preservation. It was hard work, but I was proud of my labor.
+          <p className="text-indent-about">
+            I have been coding since 2016. I initially taught myself Javascript
+            and C# while I was working as a cook and a contractor's assistant,
+            as well as other fundamentals, such as HTML, CSS and Bootstrap. I
+            reached a point where I could make full blown CRUD applications, but
+            I was lacking in understanding of many fundamental concepts of
+            computer science.
           </p>
-
-          <p>
-            After work, I spent the late hours in the day on my craft. Inspired by the likes of Joyce, Hobbes, and Kafka, I investigated meaning and how to convey it through stretching the limits of words, and by interweaving symbolism and metaphor in increasingly complex webs. I delighted in connecting the dots, and solving the problem of how to convey meaning as deeply and richly as possible. My writing was both artistic and surgical, almost mathematical in nature.
+          <p className="text-indent-about">
+            It was at this point that I decided to get a proper education. I
+            decided to enroll in, and recently graduated from{" "}
+            <a href="https://www.fullstackacademy.com/">Fullstack Academy</a>,
+            an exclusive coding bootcamp with an excellent reputation.
           </p>
-
-          <p>
-            There was a breaking point. I played a critical role in one of the restaurants that I worked at. I frequently came in on my days off, stayed extra hours and took on responsibilities that others could not. It was not unusual for me to work sixty or seventy hour weeks. Despite the satisfaction in my work I felt, I neglected my intellect and my creativity. I felt a deep sense of longing to feed that which made me, me. I re-committed myself to my passion and sailed into uncharted territory.
+          <p className="text-indent-about">
+            During my tenure at Fullstack, I had built multiple projects, either
+            as the sole developer, or in a team of developers. My final project,
+            or "Capstone" is a Google Chrome extension called Code Mode.{" "}
+            <a href="https://www.youtube.com/watch?v=H9oYe_8Ks9M">Here</a> is a
+            brief presentation that my team and I conducted.
           </p>
-
-          <p>
-            It was at this point in time where my life was in the hands of fate. Through a serious of miraculous coincidences, I ended up as the unlikely pupil of a software engineer. Through his generosity, I learned the basics of software development. Almost instantly I drew a parallel between writing and coding in my mind. The same logic was there, the flourishes, the same goal; it was just a different language, a different way of looking at things. I fell in love a second time.
+          <p className="text-indent-about">
+            Since graduation, I have also completed a few projects. One, an npm
+            library called Vobe, was a library focused on software architecture.
+            It sought to manage the "visual state" of an application by handling
+            a sort of "model" in state that presented varying sets of components
+            based on the current "mode" of the application.
           </p>
-
-          <p>
-            I devoted every second of my free time to my education, starting with the basics, HTML, CSS, Javascript, and eventually branching off into .NET MVC. It was only a matter of time before I could build full-scale applications. My first was a CRUD app, a blog, followed by a rudimentary e-commerce site. The appetite of my intellect and creative self were sated.
+          <p className="text-indent-about">
+            This website that you are currently browsing is another one of the
+            projects that followed. Perhaps the style is a little unorthodox,
+            but this is my personal site after all, I'm just having fun with it.
           </p>
-
-          <p>
-            Despite my accomplishments, something was missing, something fundamental. I could create, but I did not understand why. I knew the language, but I haphazardly fumbled my way around it with trial and error. I didn’t understand causation.
+          <p className="text-indent-about">
+            The most recent application that I have created is called{" "}
+            <a href="https://data-search-usa.herokuapp.com/">Data Search USA</a>.
+            This application allows users to create custom API requests to{" "}
+            <a href="https://datausa.io/">datausa.io</a> and presents that data
+            for the user to browse. Stylistically, Data Search USA is more
+            refined than this one (just in case you were looking for something a
+            little more subtle). *A quick note* This site, as well as Data
+            Search USA are hosted on Heroku for free. This means that the dynos
+            have to boot up which may take about 30 seconds resulting in long
+            loading times. I'm sorry for the inconvenience.
           </p>
-
-          <p>
-            It was at this time that I decided to commit to a bootcamp, so that I could fill in the gaps in my education. I set my sights on the very best, and from my research, that was Fullstack Academy. I eagerly applied, was accepted, and completed my education swiftly. We were pushed to our limits on a daily basis. I would regularly work seven days a week, often twelve hours a day. I was determined to make the most of my education, and I daresay that I have.
+          <p className="text-indent-about">
+            All in all, I'm passionate about my work and place the upmost
+            importance on writing quality code using industry best practices. If
+            you have questions about my work, or anything else for that matter,
+            please do not hesitate to contact me. My email and phone, as well as
+            linkedin and github profiles, are listed on the navbar for your
+            convenience. Thank you so much for taking the time to check out my
+            site.
           </p>
-
-          <p>
-            I am now stepping into a new life as a software engineer, determined for excellence.
-          </p>
+          <p className="text-indent-about">Kyle</p>
         </div>
         <ScrollButton />
       </div>
-    )
+    );
   }
-
 }
+
+/*
+<p>
+Hi, my name is Kyle Uehlein. I suppose that I am a lot of things; a writer, musician and software engineer to name a few, but if I had to guess, I would say that you're most likely interested in the latter.
+</p>
+<p>
+I have been coding since 2016. I initially taught myself Javascript and C# while I was working as a cook and a contractor's assistant, as well as other fundamentals, such as HTML, CSS and Bootstrap. I reached a point where I could make full blown CRUD applications, but I was lacking in understanding of many fundamental concepts of computer science.
+</p>
+<p>
+It was at this point that I decided to get a proper education. I decided to enroll in, and recently graduated from <a href="https://www.fullstackacademy.com/">Fullstack Academy</a>, an exclusive coding bootcamp with an excellent reputation.
+</p>
+*/
