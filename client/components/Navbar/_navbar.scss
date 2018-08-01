@@ -1,6 +1,5 @@
 /* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 414px) {
+@media only screen and (max-width: 414px) {
   header {
     position: fixed;
     display: block;
@@ -57,7 +56,7 @@ and (max-width : 414px) {
   }
 
   .speech-bubble {
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
     display: none;
     position: absolute;
     min-width: 8em;
@@ -72,7 +71,7 @@ and (max-width : 414px) {
   }
 
   .speech-bubble:after {
-    content: '';
+    content: "";
     display: block; /* reduce the damage in FF3.0 */
     position: absolute;
     top: 0;
@@ -182,24 +181,17 @@ and (max-width : 414px) {
 // }
 
 /* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* Styles */
 }
 
 /* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1264px) {
+@media only screen and (min-width: 1264px) {
   header {
     position: fixed;
     display: flex;
@@ -242,20 +234,22 @@ and (min-width : 1264px) {
     margin-left: 0em;
   }
 
-  .menu-toggle:hover ~ .speech-bubble, .speech-bubble:after {
+  .menu-toggle:hover ~ .speech-bubble,
+  .speech-bubble:after {
     margin: 3.2em 0 0 6.5em;
     display: flex;
     justify-content: center;
   }
 
-  .logo-container:hover .speech-bubble, .speech-bubble:after {
+  .logo-container:hover .speech-bubble,
+  .speech-bubble:after {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
   .speech-bubble {
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
     display: none;
     position: absolute;
     min-width: 8em;
@@ -271,7 +265,7 @@ and (min-width : 1264px) {
   }
 
   .speech-bubble:after {
-    content: '';
+    content: "";
     display: block; /* reduce the damage in FF3.0 */
     position: absolute;
     top: 0;
@@ -366,10 +360,8 @@ and (min-width : 1264px) {
   }
 }
 
-
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   // header {
   //   position: fixed;
   //   display: flex;
@@ -590,82 +582,166 @@ and (min-width : 1824px) {
 
 /* Animations ----------- */
 @keyframes fade-out-menu {
-  0% { opacity: 0.8; display: auto; width: 100vw; }
-  99% { width: 100vw; }
-  100% { display: none; opacity: 0; width: 0vw; }
+  0% {
+    opacity: 0.8;
+    display: auto;
+    width: 100vw;
+  }
+  99% {
+    width: 100vw;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    width: 0vw;
+  }
 }
 
 @keyframes face-slide-in {
-  0% { transform: translate(0vw, 36vh); display: auto; opacity: 0; }
-  100% { transform: translate(30vw, 36vh); opacity: 1; }
+  0% {
+    transform: translate(0vw, 36vh);
+    display: auto;
+    opacity: 0;
+  }
+  100% {
+    transform: translate(30vw, 36vh);
+    opacity: 1;
+  }
 }
 
 @keyframes face-slide-out {
-  0% { transform: translate(30vw, 36vh); opacity: 1; }
-  100% { transform: translate(0vw, 36vh); display: none; opacity: 0; }
+  0% {
+    transform: translate(30vw, 36vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0vw, 36vh);
+    display: none;
+    opacity: 0;
+  }
 }
 
 @keyframes face-fade-out {
-  0% { transform: translate(30vw, 36vh); opacity: 1; display: auto; left: 30vw; top: 36vh; }
-  100% { transform: translate(30vw, 36vh); opacity: 0; display: none; }
+  0% {
+    transform: translate(30vw, 36vh);
+    opacity: 1;
+    display: auto;
+    left: 30vw;
+    top: 36vh;
+  }
+  100% {
+    transform: translate(30vw, 36vh);
+    opacity: 0;
+    display: none;
+  }
 }
 
 @keyframes fish-fade-out {
-  0% { opacity: 1; display: auto; }
-  100% { opacity: 0; display: none; }
-}
-
-@keyframes mobile-slide-up { // portrait
   0% {
-        transform: translateY(0vh);
-        width: 100vw;
-        left: 0;
-        bottom: 0;
-      }
+    opacity: 1;
+    display: auto;
+  }
   100% {
-        transform: translateY(87.5vh);
-        width: 100vw;
-        left: 0;
-        top: 5em;
-       }
+    opacity: 0;
+    display: none;
+  }
 }
 
-@keyframes mobile-slide-down { // portrait
+@keyframes mobile-slide-up {
+  // portrait
   0% {
-        transform: translateY(87.5vh);
-        width: 100vw;
-        left: 0;
-        top: 5em;
-      }
+    transform: translateY(0vh);
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+  }
   100% {
-        transform: translateY(0vh);
-        width: 100vw;
-        left: 0;
-        bottom: 0;
-       }
+    transform: translateY(87.5vh);
+    width: 100vw;
+    left: 0;
+    top: 5em;
+  }
 }
 
-@keyframes fish-slide-up { // portrait
-  0% { transform: translateY(0em); }
-  100% { transform: translateY(-28em); top: 32em; }
+@keyframes mobile-slide-down {
+  // portrait
+  0% {
+    transform: translateY(87.5vh);
+    width: 100vw;
+    left: 0;
+    top: 5em;
+  }
+  100% {
+    transform: translateY(0vh);
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+  }
 }
 
-@keyframes fish-slide-down { // portrait
-  0% { transform: translateY(-28em); top: 32em; }
-  100% { transform: translateY(0em); }
+@keyframes fish-slide-up {
+  // portrait
+  0% {
+    transform: translateY(0em);
+  }
+  100% {
+    transform: translateY(-28em);
+    top: 32em;
+  }
 }
 
-@keyframes face-slide-up { // portrait
-  0% { transform: translate(44vw, 5em); opacity: 0; display: auto; margin: 0.5em 0 0.5em 0; }
-  100% { transform: translate(44vw, 20vh); opacity: 1; margin: 0.5em 0 0.5em 0; }
+@keyframes fish-slide-down {
+  // portrait
+  0% {
+    transform: translateY(-28em);
+    top: 32em;
+  }
+  100% {
+    transform: translateY(0em);
+  }
 }
 
-@keyframes face-slide-down { // portrait
-  0% { transform: translate(44vw, 20vh); opacity: 1; margin: 0.5em 0 0.5em 0; }
-  100% { transform: translate(44vw, 5em); display: none; opacity: 0; margin: 0.5em 0 0.5em 0; }
+@keyframes face-slide-up {
+  // portrait
+  0% {
+    transform: translate(44vw, 5em);
+    opacity: 0;
+    display: auto;
+    margin: 0.5em 0 0.5em 0;
+  }
+  100% {
+    transform: translate(44vw, 20vh);
+    opacity: 1;
+    margin: 0.5em 0 0.5em 0;
+  }
 }
 
-@keyframes face-exit { // portrait
-  0% { transform: translate(44vw, 20vh); opacity: 1; margin: 0.5em 0 0.5em 0; }
-  100% { transform: translate(44vw, 37em); display: none; opacity: 0; margin: 0.5em 0 0.5em 0; }
+@keyframes face-slide-down {
+  // portrait
+  0% {
+    transform: translate(44vw, 20vh);
+    opacity: 1;
+    margin: 0.5em 0 0.5em 0;
+  }
+  100% {
+    transform: translate(44vw, 5em);
+    display: none;
+    opacity: 0;
+    margin: 0.5em 0 0.5em 0;
+  }
+}
+
+@keyframes face-exit {
+  // portrait
+  0% {
+    transform: translate(44vw, 20vh);
+    opacity: 1;
+    margin: 0.5em 0 0.5em 0;
+  }
+  100% {
+    transform: translate(44vw, 37em);
+    display: none;
+    opacity: 0;
+    margin: 0.5em 0 0.5em 0;
+  }
 }
