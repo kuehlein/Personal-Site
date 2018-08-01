@@ -1,12 +1,5 @@
 /* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 414px) {
-  .resume-container {
-    display: flex;
-    // width: 100vw;
-    justify-content: center;
-  }
-
+@media only screen and (max-width: 414px) {
   .resume-pdf {
     position: fixed;
     top: 3em;
@@ -29,6 +22,7 @@ and (max-width : 414px) {
 
   .mobile-resume {
     position: fixed;
+    margin-left: 0.075em;
     z-index: -1;
   }
 }
@@ -39,25 +33,24 @@ and (max-width : 414px) {
 //   /* Styles */
 // }
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    /* Styles */
-  }
+// /* iPads (portrait) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px)
+// and (orientation : portrait) {
+//     /* Styles */
+//   }
 
-  /* iPads (landscape) ----------- */
-  @media only screen
-  and (min-device-width : 768px)
-  and (max-device-width : 1024px)
-  and (orientation : landscape) {
-    /* Styles */
-  }
+//   /* iPads (landscape) ----------- */
+//   @media only screen
+//   and (min-device-width : 768px)
+//   and (max-device-width : 1024px)
+//   and (orientation : landscape) {
+//     /* Styles */
+//   }
 
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
+/* Desktops and laptops ----1224px------- */
+@media only screen and (min-width: 415px) {
   .resume-container {
     display: flex;
     z-index: -1;
@@ -91,8 +84,7 @@ and (min-width : 1224px) {
 }
 
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   // .resume-container {
   //   display: flex;
   //   z-index: -1;
@@ -126,7 +118,7 @@ and (min-width : 1824px) {
 
 /* Screen size neutral ----------- */
 .button-container {
-  font-family: 'Cutive Mono', monospace;
+  font-family: "Cutive Mono", monospace;
   background-color: #eee;
   text-align: center;
   border: none;
@@ -139,7 +131,7 @@ and (min-width : 1824px) {
 }
 
 .button-download {
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
   text-decoration: none;
   color: #000;
 }
