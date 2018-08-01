@@ -1,72 +1,67 @@
-'use strict'
+"use strict";
 
-import React, { Component } from 'react'
-import { Document, Page, setOptions } from 'react-pdf/dist/entry.noworker'
-import ScrollButton from '../ScrollButton'
+import React, { Component } from "react";
+import { Document, Page, setOptions } from "react-pdf/dist/entry.noworker";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import ScrollButton from "../ScrollButton";
 
-import './_resume.scss'
+import "./_resume.scss";
 
-import resume from '../../assets/resume.pdf'
-
+import resume from "../../assets/resume.pdf";
 
 setOptions({
-  cMapUrl: 'cmaps/',
+  cMapUrl: "cmaps/",
   cMapPacked: true
-})
-
+});
 
 export default class Resume extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       numPages: null,
       pageNumber: 1,
-      transition: 'in'
-    }
-    this.onDocumentLoad = this.onDocumentLoad.bind(this)
+      transition: "in"
+    };
+    this.onDocumentLoad = this.onDocumentLoad.bind(this);
   }
 
   componentWillUnmount() {
-    this.setState({ transition: 'out' })
-    window.dispatchEvent(new Event('popstate'))
+    this.setState({ transition: "out" });
+    window.dispatchEvent(new Event("popstate"));
   }
 
-  onDocumentLoad ({ numPages }) {
-    this.setState({ numPages: 1 })
+  onDocumentLoad({ numPages }) {
+    this.setState({ numPages: 1 });
   }
 
   render() {
-    const { pageNumber, numPages } = this.state
-    document.title = "My Résumé"
-    const scaleRatio = screen.width > 415 ? 1.6111 : 0.6
+    const { pageNumber, numPages } = this.state;
+    document.title = "My Résumé";
+    const scaleRatio = screen.width > 415 ? 1.6111 : 0.6;
 
     return (
       <div className="mobile-resume">
-        <div className={`resume-container fade-${this.state.transition}`}>
-          <Document
-            file={ resume }
-            onLoadSuccess={ this.onDocumentLoad }
-            className="resume-pdf"
-          >
-            <Page pageNumber={ pageNumber } scale={ scaleRatio }/>
-          </Document>
-        </div>
+        <Document
+          file={resume}
+          onLoadSuccess={this.onDocumentLoad}
+          className={`resume-pdf resume-container fade-${
+            this.state.transition
+          }`}
+        >
+          <Page pageNumber={pageNumber} scale={scaleRatio} />
+        </Document>
         {/* <p>Page { pageNumber } of { numPages }</p> */}
         <div className="button-container">
           <a
-            href={ resume }
+            href={resume}
             download="Kyle_Uehlein_Resume.pdf"
             className="button-download"
           >
             Download
           </a>
         </div>
-        {
-          screen.width > 415
-            && <ScrollButton />
-        }
+        {screen.width > 415 && <ScrollButton />}
       </div>
-    )
+    );
   }
-
 }

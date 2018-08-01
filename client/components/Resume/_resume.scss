@@ -1,11 +1,5 @@
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 414px) {
-  .resume-container {
-    display: flex;
-    // width: 100vw;
-    justify-content: center;
-  }
-
   .resume-pdf {
     position: fixed;
     top: 3em;
@@ -28,6 +22,7 @@
 
   .mobile-resume {
     position: fixed;
+    margin-left: 0.075em;
     z-index: -1;
   }
 }
