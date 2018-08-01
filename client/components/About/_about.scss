@@ -1,6 +1,5 @@
 /* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 414px) {
+@media only screen and (max-width: 414px) {
   .text-container {
     position: fixed;
     overflow: scroll;
@@ -20,25 +19,24 @@ and (max-width : 414px) {
 //   /* Styles */
 // }
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    /* Styles */
-  }
+// /* iPads (portrait) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px)
+// and (orientation : portrait) {
+//     /* Styles */
+//   }
 
-  /* iPads (landscape) ----------- */
-  @media only screen
-  and (min-device-width : 768px)
-  and (max-device-width : 1024px)
-  and (orientation : landscape) {
-    /* Styles */
-  }
+//   /* iPads (landscape) ----------- */
+//   @media only screen
+//   and (min-device-width : 768px)
+//   and (max-device-width : 1024px)
+//   and (orientation : landscape) {
+//     /* Styles */
+//   }
 
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
+/* Desktops and laptops ---1224px-------- */
+@media only screen and (min-width: 415px) {
   .text-container {
     padding: 2em;
     max-width: 59.83em;
@@ -49,8 +47,7 @@ and (min-width : 1224px) {
 }
 
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   // .text-container {
   //   padding: 2em;
   //   max-width: 59.83em;
@@ -63,6 +60,6 @@ and (min-width : 1824px) {
 /* Screen size neutral ----------- */
 .text-container {
   box-shadow: 0.7em 0.7em 1em #111;
-  background-image: url('http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg');
+  background-image: url("http://1.bp.blogspot.com/-mJpKSDcsk8M/T7GbxfuI9fI/AAAAAAAAArU/GeaX_SbKMpo/s1600/paper-background.jpg");
   font-weight: 700;
 }
