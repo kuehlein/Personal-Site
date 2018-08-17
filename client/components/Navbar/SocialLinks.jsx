@@ -10,7 +10,7 @@ import linkedin from "../../assets/linkedin.png";
 export default function SocialLinks() {
   return (
     <div className="social-link-container">
-      <a href="tel:781-996-2427">
+      <a href="tel:908-280-1935">
         <img src={phone} alt="phone" className="social-link" />
       </a>
       <a href="mailto:kyleuehlein@gmail.com?Subject=I love your website, you have great taste!">
